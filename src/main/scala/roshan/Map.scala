@@ -1,6 +1,7 @@
 package roshan
+
 import akka.actor.{ActorLogging, ActorRef, Actor}
-import buffer.Msg.{LAYERS, MapData, CharacterAction}
+import roshan.buffer.Msg.{LAYERS, MapData, CharacterAction}
 import collection.immutable.HashMap
 import roshan.protocols.CharacterChangesProtocol.{Unsubscribe, Subscribe, CharacterChangeBroadcast}
 import roshan.protocols.CharacterProtocol._

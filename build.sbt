@@ -10,8 +10,11 @@ resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/release
  
 libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.1.4"
 
+libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % "2.1.4"
+
 // Parboiled
-libraryDependencies += "org.parboiled" % "parboiled-scala" % "1.0.1"
+// Included in another library here and conflicts (apparently)
+// libraryDependencies += "org.parboiled" % "parboiled-scala"
 
 // ScalaTest
 libraryDependencies += "org.scalatest" % "scalatest_2.10" % "1.9.1" % "test"
@@ -22,6 +25,9 @@ libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.6.4"
 // Slick
 libraryDependencies += "com.typesafe.slick" %% "slick" % "1.0.0"
 
+// Protobuf
+libraryDependencies += "com.google.protobuf" % "protobuf-java" % "2.5.0"
+
 // Spray
 resolvers += "spray" at "http://repo.spray.io/"
 
@@ -29,8 +35,5 @@ libraryDependencies += "io.spray" %%  "spray-json" % "1.2.4"
 
 // Sqlite
 libraryDependencies += "org.xerial" % "sqlite-jdbc" % "3.7.2"
-            
-// OneJar
-seq(com.github.retronym.SbtOneJar.oneJarSettings: _*)
 
 libraryDependencies += "commons-lang" % "commons-lang" % "2.6"

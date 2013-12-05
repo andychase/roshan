@@ -1,3 +1,5 @@
+package roshanTest
+
 import akka.actor._
 import akka.testkit.{TestActorRef, TestKit, ImplicitSender}
 import org.scalatest.{BeforeAndAfterEach, WordSpec, BeforeAndAfterAll}
@@ -91,7 +93,7 @@ class MapTest(_system: ActorSystem) extends TestKit(_system)
     "handle characters moving" in {
       map ! AddCharacter(1, 15, 15)
       map ! Subscribe()
-      def ly = MapLayer.newBuilder().addAllTile(_)
+      val ly = MapLayer.newBuilder().addAllTile _
       def buildBlankMap = MapData.newBuilder().addAllLayer(
           0 to 4 map {_=>ly(0 to 20*20 map {_=>new Integer(0)}).build}
         ).build()

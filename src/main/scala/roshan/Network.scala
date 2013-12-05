@@ -1,28 +1,26 @@
 package roshan
 
-import akka.actor._
-import collection.mutable
+import akka.actor.{ Actor, Props }
+import akka.io.{ IO, Tcp }
 import java.net.InetSocketAddress
-import roshan.protocols.ClientProtocol._
 
 /** Actor that communicates with clients over TCP */
-class Network(port:Int) extends Actor with ActorLogging {
-  var clients = new mutable.HashMap[IO.Handle, ActorRef]()
+class Network(port:Int) extends Actor  {
 
-  override def preStart() { IOManager(context.system) listen new InetSocketAddress(port) }
+  import Tcp._
+  import context.system
+
+  IO(Tcp) ! Bind(self, new InetSocketAddress("localhost", port))
 
   def receive = {
-    case IO.NewClient(server) =>
-      val clientHandle = server.accept()
-      val client = Server.clientConnected(clientHandle)
-      clients += clientHandle -> client
+    case b @ Bound(localAddress) =>
+    // do some logging or setup ...
 
-    case IO.Read(clientHandle, bytes) =>
-      clients(clientHandle) ! ReceiveMessage(bytes)
+    case CommandFailed(_: Bind) => context stop self
 
-    case IO.Closed(clientHandle, cause) =>
-      clients(clientHandle) ! Cleanup()
-      clients(clientHandle) ! PoisonPill
-      clients.remove(clientHandle)
+    case c @ Connected(remote, local) =>
+      val handler = context.actorOf(Props[Client])
+      val connection = sender
+      connection ! Register(handler)
   }
 }

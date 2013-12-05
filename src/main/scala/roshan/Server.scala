@@ -1,6 +1,6 @@
 package roshan
 
-import akka.actor.{ActorRef, IO, Props, ActorSystem}
+import akka.actor.{ActorRef, Props, ActorSystem}
 import roshan.db.{dbCharacter, Loader}
 import roshan.Useful._
 import roshan.protocols.LoaderProtocol.{SaveCharacter, SendMap, LoadCharacter}
@@ -25,7 +25,7 @@ object Server extends App with Mappable with Loaderable {
   lazy val system = TestActorSystem getOrElse ActorSystem("LittleIslandSystem")
 
   // Setup primary servers
-  val network = if (isTesting) null else system.actorOf(Props(new Network(8081)), "network")
+  val network = if (isTesting) null else system.actorOf(Props[Network](new Network(8081)), "network")
   lazy val loader = system.actorOf(Props[Loader], "loader")
   lazy val login = system.actorOf(Props[Login], "login")
 
@@ -35,7 +35,7 @@ object Server extends App with Mappable with Loaderable {
   lazy val MapBoxes:Array[ActorRef] = (
     for (y <- 0 until mapBoxesY*tilesPerMap by tilesPerMap;
          x <- 0 until mapBoxesX*tilesPerMap by tilesPerMap)
-      yield system.actorOf(Props(new MapBox(x, y)), "map%d,%d".format(x, y))
+      yield system.actorOf(Props[MapBox](new MapBox(x, y)), "map%d,%d".format(x, y))
   ).toArray[ActorRef]
 
   // Send maps to map boxes
@@ -49,9 +49,6 @@ object Server extends App with Mappable with Loaderable {
   def register(client:ActorRef) {
     loader tell (LoadCharacter(Useful.defaultCharacter), client)
   }
-
-  def clientConnected(handle:IO.ReadHandle):ActorRef =
-    system.actorOf(Props(new Client(handle)))
 
   // Map Box functions
   def mapBox(x:Int, y:Int):ActorRef  = MapBoxes(mapBoxNumber(x, y))

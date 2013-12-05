@@ -8,9 +8,9 @@ scalaVersion := "2.10.3"
 // Akka
 resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
  
-libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.1.4"
+libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.2.3"
 
-libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % "2.1.4"
+libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % "2.2.3"
 
 // Parboiled
 // Included in another library here and conflicts (apparently)

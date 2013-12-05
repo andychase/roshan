@@ -30,7 +30,7 @@ class ServerTest(_system: ActorSystem) extends TestKit(_system)
 
     "Have correctly ordered Map Boxes" in {
       val name = Server.mapBox(21, 0).toString()
-      name should endWith ("map20,0]")
+      name contains "map20,0"
     }
   }
 }

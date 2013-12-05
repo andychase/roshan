@@ -1,6 +1,5 @@
 package roshan
 import akka.actor._
-import akka.actor.IO.ReadHandle
 import akka.event.Logging
 import akka.util.ByteString
 import buffer.Msg._
@@ -14,8 +13,10 @@ import roshan.protocols.CharacterChangesProtocol._
 import roshan.protocols.CharacterProtocol._
 import roshan.protocols.ClientProtocol._
 import roshan.protocols.LoginProtocol.Register
+import akka.io.Tcp.{Write, PeerClosed, Received}
 
-class Client(handle:ReadHandle) extends Actor {
+class Client() extends Actor {
+
   val log = Logging(context.system, this)
   var worldChange = WorldChange.newBuilder()
   val scheduler = context.system.scheduler
@@ -77,8 +78,8 @@ class Client(handle:ReadHandle) extends Actor {
   }
 
   def sendOrSchedule() {
-    // For now no delay
-    self ! SendWorldChange
+      // For now no delay
+      self ! SendWorldChange
   }
 
   def translateMessage(raw: ByteString) {
@@ -88,7 +89,7 @@ class Client(handle:ReadHandle) extends Actor {
 
   def waitingForCharacter:Receive = {
     case LoadCharacter(char) =>
-      hero = context.system.actorOf(Props(new Character(client = self, character = char)))
+      hero = context.system.actorOf(Props[Character](new Character(client = self, character = char)))
       my_character_id = Option(new CharacterId(char.id.get))
       updateSubscriptions(char.x, char.y)
 
@@ -105,7 +106,7 @@ class Client(handle:ReadHandle) extends Actor {
   }
 
   def receive = {
-    case ReceiveMessage(message) =>
+    case Received(message) =>
       try translateMessage(message)
       catch { case e: InvalidProtocolBufferException => }
 
@@ -132,11 +133,11 @@ class Client(handle:ReadHandle) extends Actor {
       if (worldChange.getCharacterActionsCount > 0 || worldChange.getMapDataCount > 0) {
         val output_stream = new ByteArrayOutputStream()
         worldChange.build.writeDelimitedTo(output_stream)
-        handle.asSocket write ByteString(output_stream.toByteArray)
+        sender ! Write(ByteString(output_stream.toByteArray))
         worldChange.clear()
       }
 
-    case Cleanup() =>
+    case PeerClosed | Cleanup() =>
       hero ! SaveNow
       hero ! PoisonPill
   }

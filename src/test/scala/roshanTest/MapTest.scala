@@ -6,18 +6,10 @@ import org.scalatest.{BeforeAndAfterEach, WordSpec, BeforeAndAfterAll}
 import org.scalatest.matchers.{ShouldMatchers, MustMatchers}
 import roshan.buffer.Msg.ACTION._
 import roshan.buffer.Msg.{MapLayer, MapData, ACTION}
-import roshan.db.dbCharacter
 import roshan.model.Direction
-import roshan.protocols.CharacterChangesProtocol.CharacterChangeBroadcast
-import roshan.protocols.CharacterChangesProtocol.Subscribe
-import roshan._
-import roshan.protocols.LoaderProtocol.ReceiveMap
-import roshan.protocols.MapProtocol._
-import roshan.protocols.MapProtocol.DirAction
-import roshan.protocols.MapProtocol.Say
-import roshan.protocols.MapProtocol.SendAllUsers
-import roshan.protocols.MapProtocol.Walk
 import scala.concurrent.duration._
+import roshan.map.MapBox
+import roshan.Character
 import scala.collection.JavaConversions.asJavaIterable
 import roshan.protocols.CharacterChangesProtocol.CharacterChangeBroadcast
 import roshan.protocols.LoaderProtocol.ReceiveMap
@@ -29,20 +21,11 @@ import roshan.protocols.MapProtocol.AddCharacter
 import roshan.db.dbCharacter
 import roshan.protocols.MapProtocol.SendAllUsers
 import roshan.protocols.MapProtocol.Say
-import roshan.protocols.CharacterChangesProtocol.CharacterChangeBroadcast
-import roshan.protocols.LoaderProtocol.ReceiveMap
-import scala.Some
-import roshan.protocols.MapProtocol.Walk
-import roshan.protocols.CharacterChangesProtocol.Subscribe
-import roshan.protocols.MapProtocol.DirAction
-import roshan.protocols.MapProtocol.AddCharacter
-import roshan.db.dbCharacter
-import roshan.protocols.MapProtocol.SendAllUsers
-import roshan.protocols.MapProtocol.Say
+import roshan.{Loaderable, Mappable, Useful}
 
 class MapTest(_system: ActorSystem) extends TestKit(_system)
     with ImplicitSender with WordSpec with MustMatchers with BeforeAndAfterAll with BeforeAndAfterEach with ShouldMatchers {
-  var map:TestActorRef[map.Map] = null
+  var map:TestActorRef[MapBox] = null
 
   def this() = this(Useful.testing)
 
@@ -51,7 +34,7 @@ class MapTest(_system: ActorSystem) extends TestKit(_system)
   }
 
   override def beforeEach() {
-    map = TestActorRef(new map.Map(Server = ServerMock))
+    map = TestActorRef(new MapBox(Server = ServerMock))
   }
 
   val log = system.log

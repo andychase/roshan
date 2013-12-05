@@ -5,7 +5,7 @@ import akka.testkit.{TestActorRef, TestKit, ImplicitSender}
 import org.scalatest.{BeforeAndAfterEach, WordSpec, BeforeAndAfterAll}
 import org.scalatest.matchers.{ShouldMatchers, MustMatchers}
 import roshan.{Useful, Client}
-import roshan.map.Map
+import roshan.map.MapBox
 
 class ClientTest(_system: ActorSystem) extends TestKit(_system)
 with ImplicitSender with WordSpec with MustMatchers with BeforeAndAfterAll with BeforeAndAfterEach with ShouldMatchers {
@@ -13,7 +13,7 @@ with ImplicitSender with WordSpec with MustMatchers with BeforeAndAfterAll with 
   def this() = this(Useful.testing)
   var clientRef:TestActorRef[Client] = _
   var client:Client = _
-  var map:TestActorRef[Map] = _
+  var map:TestActorRef[MapBox] = _
   override def afterAll() {
     system.shutdown()
   }

@@ -1,13 +1,13 @@
 package roshan.map
 
-import akka.actor.ActorRef
+import akka.actor.{Actor, ActorRef}
 import roshan.protocols.MapProtocol.CharacterId
 import roshan.buffer.Msg.{CharacterAction, ACTION}
 import roshan.model.Direction._
 import roshan.protocols.CharacterChangesProtocol._
 
 /** Event Box is a event pub/sub system for map boxes. */
-trait EventBox {
+trait EventBox extends Actor {
   /** This is a list of characters that are subscribes to actions here */
   var subscribers = Set[ActorRef]()
   def publish(event: CharacterChangeBroadcast) { subscribers foreach ( _ ! event) }
@@ -41,5 +41,13 @@ trait EventBox {
       msg.setSay(say)
 
     publish(CharacterChangeBroadcast(msg.build()))
+  }
+
+  def SubUnsub:Receive = {
+    case Subscribe() =>
+    subscribe(sender)
+
+    case Unsubscribe =>
+    unsubscribe(sender)
   }
 }

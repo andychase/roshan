@@ -4,7 +4,7 @@ import akka.actor.{ActorRef, IO, Props, ActorSystem}
 import roshan.db.{dbCharacter, Loader}
 import roshan.Useful._
 import roshan.protocols.LoaderProtocol.{SaveCharacter, SendMap, LoadCharacter}
-import roshan.map.Map
+import roshan.map.MapBox
 
 trait Mappable {
   def mapBox(x:Int, y:Int):ActorRef
@@ -35,7 +35,7 @@ object Server extends App with Mappable with Loaderable {
   lazy val MapBoxes:Array[ActorRef] = (
     for (y <- 0 until mapBoxesY*tilesPerMap by tilesPerMap;
          x <- 0 until mapBoxesX*tilesPerMap by tilesPerMap)
-      yield system.actorOf(Props(new Map(x, y)), "map%d,%d".format(x, y))
+      yield system.actorOf(Props(new MapBox(x, y)), "map%d,%d".format(x, y))
   ).toArray[ActorRef]
 
   // Send maps to map boxes

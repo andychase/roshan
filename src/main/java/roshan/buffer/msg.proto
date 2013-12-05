@@ -1,0 +1,100 @@
+option optimize_for = LITE_RUNTIME;
+package roshan.buffer;
+
+// World State //
+message MapLayer {
+    repeated uint32 tile = 1 [packed=true];
+}
+
+message MapData {
+    optional string mapName = 1;
+    optional uint32 xOffset = 2; // Offset from the world
+    optional uint32 yOffset = 3; // Offset from the world
+    optional uint32 xSize = 4;   // Size of map
+    optional uint32 ySize = 5;   // Size of map
+    repeated MapLayer layer = 6; // The tiles
+}
+
+enum CHANGE {
+    Clear = 0; // Remove all characters
+    Modify = 1; // Tiles have changed
+}
+
+message MapChange {
+    required CHANGE change = 1;
+    required uint32 MapBoxX = 2;
+    required uint32 MapBoxY  = 3;
+    repeated uint32 ChangedXs = 4;
+    repeated uint32 ChangedYs = 5;
+    repeated uint32 ChangedLayers = 6;
+    repeated uint32 newTile = 7;
+}
+
+// Shared (Both Server & Client) //
+
+enum DIRECTION {
+    S  = 0;
+    SW = 1;
+    W  = 2;
+    NW = 3;
+    N  = 4;
+    NE = 5;
+    E  = 6;
+    SE = 7;
+}
+
+enum ACTION {
+    SWORD = 1;
+    PICKUP = 2;
+    WALK = 3;
+    SAY = 4;
+    HURT = 5;
+    HEAL = 6;
+}
+
+enum LAYERS {
+    BASE = 0;
+    HIGHER = 1;
+    TOP = 2;
+    COLLISION = 3;
+}
+
+enum ITEM_ATTR {
+    SWORDATTR = 0;
+    HEALATTR  = 1;
+    BASIC_DMG = 2;
+}
+
+enum CHARACTER_TYPE {
+    HERO = 1;
+    BLOOP = 2;
+}
+
+// World Change (Server to Client) //
+
+message CharacterAction  {
+    required uint32 id = 1;
+    optional sint32 x = 2;
+    optional sint32 y = 3;
+    optional string say = 4;
+    optional bool walk = 7;
+    optional uint32 direction = 8;
+    optional ACTION action = 9;
+    optional bool isYou = 11;
+    optional bool gone = 12;
+    optional CHARACTER_TYPE characterType = 13;
+}
+
+message WorldChange {
+    repeated CharacterAction characterActions = 1;
+    repeated MapData mapData = 2;
+    repeated MapChange mapChange = 3;
+}
+
+// Client Change (Client to Server) //
+
+message ClientChange {
+    optional ACTION action = 1;
+    optional uint32 direction = 2;
+    optional string say = 3;
+}

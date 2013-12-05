@@ -4,6 +4,7 @@ import akka.actor.{ActorRef, IO, Props, ActorSystem}
 import roshan.db.{dbCharacter, Loader}
 import roshan.Useful._
 import roshan.protocols.LoaderProtocol.{SaveCharacter, SendMap, LoadCharacter}
+import roshan.map.Map
 
 trait Mappable {
   def mapBox(x:Int, y:Int):ActorRef

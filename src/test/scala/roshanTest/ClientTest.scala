@@ -4,7 +4,8 @@ import akka.actor.ActorSystem
 import akka.testkit.{TestActorRef, TestKit, ImplicitSender}
 import org.scalatest.{BeforeAndAfterEach, WordSpec, BeforeAndAfterAll}
 import org.scalatest.matchers.{ShouldMatchers, MustMatchers}
-import roshan.{Useful, Map, Client}
+import roshan.{Useful, Client}
+import roshan.map.Map
 
 class ClientTest(_system: ActorSystem) extends TestKit(_system)
 with ImplicitSender with WordSpec with MustMatchers with BeforeAndAfterAll with BeforeAndAfterEach with ShouldMatchers {

@@ -1,4 +1,4 @@
-package roshan
+package roshan.map
 
 import akka.actor.{ActorLogging, ActorRef, Actor}
 import roshan.buffer.Msg.{LAYERS, MapData, CharacterAction}
@@ -10,6 +10,8 @@ import roshan.protocols.MapProtocol._
 import roshan.model.Grid
 import roshan.model.Direction._
 import roshan.Useful._
+import roshan.map.EventBox
+import roshan.{Useful, Loaderable, Mappable}
 
 class Map(val mapX:Int = 0, val mapY:Int = 0, Server:Mappable with Loaderable = Server)
                                                             extends Actor with ActorLogging with EventBox {

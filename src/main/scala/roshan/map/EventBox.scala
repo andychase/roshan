@@ -1,4 +1,4 @@
-package roshan
+package roshan.map
 
 import akka.actor.ActorRef
 import roshan.protocols.MapProtocol.CharacterId

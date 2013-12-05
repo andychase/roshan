@@ -77,7 +77,8 @@ class Client(handle:ReadHandle) extends Actor {
   }
 
   def sendOrSchedule() {
-      self ! SendWorldChange
+    // For now no delay
+    self ! SendWorldChange
   }
 
   def translateMessage(raw: ByteString) {
@@ -109,7 +110,7 @@ class Client(handle:ReadHandle) extends Actor {
       catch { case e: InvalidProtocolBufferException => }
 
     case CharacterChangeBroadcast(characterAction) =>
-      if (characterAction.getId == my_character_id.get && characterAction.getWalk)
+      if (characterAction.getId == my_character_id.get.underlying && characterAction.getWalk)
         updateSubscriptions(characterAction.getX, characterAction.getY)
       if (characterAction.getWalk
           && !my_subscriptions.contains(Useful.mapSection(characterAction.getX, characterAction.getY)))

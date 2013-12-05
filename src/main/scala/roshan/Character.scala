@@ -4,7 +4,6 @@ import akka.actor._
 import buffer.Msg.ACTION._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
-
 import roshan.buffer.Msg.ACTION
 import roshan.item.ItemFactory
 import roshan.buffer.Msg.ITEM_ATTR._
@@ -51,7 +50,7 @@ class Character(client:ActorRef = null, Server:Mappable = Server, character:dbCh
       case SWORD if my.items.nonEmpty =>
         val replacement = ItemFactory use(my.items.head, map, this)
         // Replace into items
-        my.items = replacement map (List(_)) getOrElse(Nil) ::: my.items.splitAt(1)._2
+        my.items = replacement map (List(_)) getOrElse Nil ::: my.items.splitAt(1)._2
       case SAY =>
         map ! Say(say)
       case WALK =>

@@ -1,6 +1,6 @@
 package roshan.map
 
-import akka.actor.{ActorLogging, ActorRef, Actor}
+import akka.actor.{ActorLogging, Actor}
 import roshan.buffer.Msg.CharacterAction
 import roshan.protocols.CharacterChangesProtocol.CharacterChangeBroadcast
 import roshan.protocols.CharacterProtocol._
@@ -12,9 +12,6 @@ import roshan.{Server=>_Server}
 class MapBox(val mapX:Int = 0, val mapY:Int = 0, val Server:Mappable with Loaderable = _Server)
                 extends Actor with ActorLogging with EventBox with CharacterHandler with MapInfo {
 
-  /** If the map isn't loaded yet, queue up walk messages here */
-  var waitingWalkMsg = List[(Walk, ActorRef)]()
-
   def receive = SubUnsub orElse characterActions orElse HandleMapInfo orElse {
 
     case Walk(direction, speed) =>
@@ -23,8 +20,7 @@ class MapBox(val mapX:Int = 0, val mapY:Int = 0, val Server:Mappable with Loader
       moveOnOurMap(newX, newY) match {
         case _ if newX < 0 || newY < 0 =>
 
-        case true if tile_map.isEmpty =>
-          waitingWalkMsg = (Walk(direction, speed), sender) :: waitingWalkMsg
+        case true if tile_map.isEmpty => // Do nothing if map isn't loaded yet
 
         case true if !grid.checkCharacterCollision(newX, newY) && !checkMapCollision(newX, newY) =>
           grid.move(sender, newX, newY)
@@ -35,7 +31,6 @@ class MapBox(val mapX:Int = 0, val mapY:Int = 0, val Server:Mappable with Loader
         case false =>
           Server.mapBox(newX, newY) ! MoveCharacter(newX, newY, char_id(sender), sender)
       }
-
 
     case Say(say) =>
       publishCharacterChange(id= char_id(sender), say= say)

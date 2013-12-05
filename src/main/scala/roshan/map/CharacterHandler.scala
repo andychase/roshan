@@ -9,7 +9,7 @@ import roshan.Loaderable
 
 trait CharacterHandler extends Actor with EventBox with MapInfo {
   var char_id = mutable.HashMap[ActorRef, CharacterId]()
-  val Server:Loaderable
+  val Server: Loaderable
 
   def characterActions: Receive = {
     case MoveCharacter(x, y, id, character) =>
@@ -39,6 +39,6 @@ trait CharacterHandler extends Actor with EventBox with MapInfo {
 
     case SaveCharacter(char) =>
       val (x, y) = grid.characterPosition(sender)
-      Server.saveChar(char.copy(x= x, y= y), sender)
+      Server.saveChar(char.copy(x = x, y = y), sender)
   }
 }

@@ -11,8 +11,6 @@ Installation
 
 Supports Oracle Java7 and Scala 2.10.2
 
-.. code-block:: bash
-
     sbt run
 
 For packaging:

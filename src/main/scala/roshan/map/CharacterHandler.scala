@@ -4,7 +4,6 @@ import akka.actor.{Actor, ActorRef}
 import roshan.protocols.MapProtocol.{AddCharacter, RemoveCharacter, MoveCharacter, CharacterId}
 import scala.collection.mutable
 import roshan.protocols.CharacterProtocol.Moved
-import roshan.protocols.LoaderProtocol.SaveCharacter
 import roshan.Loaderable
 
 trait CharacterHandler extends Actor with EventBox with MapInfo {
@@ -36,9 +35,5 @@ trait CharacterHandler extends Actor with EventBox with MapInfo {
       }
       grid remove sender
       char_id -= sender
-
-    case SaveCharacter(char) =>
-      val (x, y) = grid.characterPosition(sender)
-      Server.saveChar(char.copy(x = x, y = y), sender)
   }
 }

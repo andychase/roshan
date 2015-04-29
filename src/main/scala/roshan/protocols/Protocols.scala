@@ -1,8 +1,7 @@
 package roshan.protocols
-import roshan.buffer.Msg.{ITEM_ATTR, CharacterAction, MapData, ACTION}
 import akka.actor.ActorRef
-import roshan.db.dbCharacter
 import akka.util.ByteString
+import roshan.buffer.Msg.{ACTION, CharacterAction, ITEM_ATTR, MapData}
 import roshan.model.Direction.Direction
 
 object ClientProtocol {
@@ -46,10 +45,6 @@ object LoaderProtocol {
   case class SendItems(toWhom:ActorRef)
   case class SendMap(x: Int, y: Int, toWhom: ActorRef)
   case class ReceiveMap(x:Int, y:Int, Map: MapData)
-
-  case class SaveCharacter(char:dbCharacter)
-  /** New Character (if None) */
-  case class LoadCharacter(char:dbCharacter)
 }
 
 object CharacterChangesProtocol {

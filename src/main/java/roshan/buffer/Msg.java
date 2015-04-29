@@ -8,18 +8,49 @@ public final class Msg {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
+  /**
+   * Protobuf enum {@code roshan.buffer.CHANGE}
+   */
   public enum CHANGE
       implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>Clear = 0;</code>
+     *
+     * <pre>
+     * Remove all characters
+     * </pre>
+     */
     Clear(0, 0),
+    /**
+     * <code>Modify = 1;</code>
+     *
+     * <pre>
+     * Tiles have changed
+     * </pre>
+     */
     Modify(1, 1),
     ;
-    
+
+    /**
+     * <code>Clear = 0;</code>
+     *
+     * <pre>
+     * Remove all characters
+     * </pre>
+     */
     public static final int Clear_VALUE = 0;
+    /**
+     * <code>Modify = 1;</code>
+     *
+     * <pre>
+     * Tiles have changed
+     * </pre>
+     */
     public static final int Modify_VALUE = 1;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static CHANGE valueOf(int value) {
       switch (value) {
         case 0: return Clear;
@@ -27,7 +58,7 @@ public final class Msg {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<CHANGE>
         internalGetValueMap() {
       return internalValueMap;
@@ -39,40 +70,91 @@ public final class Msg {
               return CHANGE.valueOf(number);
             }
           };
-    
+
     private final int value;
-    
+
     private CHANGE(int index, int value) {
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:roshan.buffer.CHANGE)
   }
-  
+
+  /**
+   * Protobuf enum {@code roshan.buffer.DIRECTION}
+   */
   public enum DIRECTION
       implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>S = 0;</code>
+     */
     S(0, 0),
+    /**
+     * <code>SW = 1;</code>
+     */
     SW(1, 1),
+    /**
+     * <code>W = 2;</code>
+     */
     W(2, 2),
+    /**
+     * <code>NW = 3;</code>
+     */
     NW(3, 3),
+    /**
+     * <code>N = 4;</code>
+     */
     N(4, 4),
+    /**
+     * <code>NE = 5;</code>
+     */
     NE(5, 5),
+    /**
+     * <code>E = 6;</code>
+     */
     E(6, 6),
+    /**
+     * <code>SE = 7;</code>
+     */
     SE(7, 7),
     ;
-    
+
+    /**
+     * <code>S = 0;</code>
+     */
     public static final int S_VALUE = 0;
+    /**
+     * <code>SW = 1;</code>
+     */
     public static final int SW_VALUE = 1;
+    /**
+     * <code>W = 2;</code>
+     */
     public static final int W_VALUE = 2;
+    /**
+     * <code>NW = 3;</code>
+     */
     public static final int NW_VALUE = 3;
+    /**
+     * <code>N = 4;</code>
+     */
     public static final int N_VALUE = 4;
+    /**
+     * <code>NE = 5;</code>
+     */
     public static final int NE_VALUE = 5;
+    /**
+     * <code>E = 6;</code>
+     */
     public static final int E_VALUE = 6;
+    /**
+     * <code>SE = 7;</code>
+     */
     public static final int SE_VALUE = 7;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static DIRECTION valueOf(int value) {
       switch (value) {
         case 0: return S;
@@ -86,7 +168,7 @@ public final class Msg {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<DIRECTION>
         internalGetValueMap() {
       return internalValueMap;
@@ -98,36 +180,75 @@ public final class Msg {
               return DIRECTION.valueOf(number);
             }
           };
-    
+
     private final int value;
-    
+
     private DIRECTION(int index, int value) {
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:roshan.buffer.DIRECTION)
   }
-  
+
+  /**
+   * Protobuf enum {@code roshan.buffer.ACTION}
+   */
   public enum ACTION
       implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>SWORD = 1;</code>
+     */
     SWORD(0, 1),
+    /**
+     * <code>PICKUP = 2;</code>
+     */
     PICKUP(1, 2),
+    /**
+     * <code>WALK = 3;</code>
+     */
     WALK(2, 3),
+    /**
+     * <code>SAY = 4;</code>
+     */
     SAY(3, 4),
+    /**
+     * <code>HURT = 5;</code>
+     */
     HURT(4, 5),
+    /**
+     * <code>HEAL = 6;</code>
+     */
     HEAL(5, 6),
     ;
-    
+
+    /**
+     * <code>SWORD = 1;</code>
+     */
     public static final int SWORD_VALUE = 1;
+    /**
+     * <code>PICKUP = 2;</code>
+     */
     public static final int PICKUP_VALUE = 2;
+    /**
+     * <code>WALK = 3;</code>
+     */
     public static final int WALK_VALUE = 3;
+    /**
+     * <code>SAY = 4;</code>
+     */
     public static final int SAY_VALUE = 4;
+    /**
+     * <code>HURT = 5;</code>
+     */
     public static final int HURT_VALUE = 5;
+    /**
+     * <code>HEAL = 6;</code>
+     */
     public static final int HEAL_VALUE = 6;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static ACTION valueOf(int value) {
       switch (value) {
         case 1: return SWORD;
@@ -139,7 +260,7 @@ public final class Msg {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<ACTION>
         internalGetValueMap() {
       return internalValueMap;
@@ -151,32 +272,59 @@ public final class Msg {
               return ACTION.valueOf(number);
             }
           };
-    
+
     private final int value;
-    
+
     private ACTION(int index, int value) {
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:roshan.buffer.ACTION)
   }
-  
+
+  /**
+   * Protobuf enum {@code roshan.buffer.LAYERS}
+   */
   public enum LAYERS
       implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>BASE = 0;</code>
+     */
     BASE(0, 0),
+    /**
+     * <code>HIGHER = 1;</code>
+     */
     HIGHER(1, 1),
+    /**
+     * <code>TOP = 2;</code>
+     */
     TOP(2, 2),
+    /**
+     * <code>COLLISION = 3;</code>
+     */
     COLLISION(3, 3),
     ;
-    
+
+    /**
+     * <code>BASE = 0;</code>
+     */
     public static final int BASE_VALUE = 0;
+    /**
+     * <code>HIGHER = 1;</code>
+     */
     public static final int HIGHER_VALUE = 1;
+    /**
+     * <code>TOP = 2;</code>
+     */
     public static final int TOP_VALUE = 2;
+    /**
+     * <code>COLLISION = 3;</code>
+     */
     public static final int COLLISION_VALUE = 3;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static LAYERS valueOf(int value) {
       switch (value) {
         case 0: return BASE;
@@ -186,7 +334,7 @@ public final class Msg {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<LAYERS>
         internalGetValueMap() {
       return internalValueMap;
@@ -198,30 +346,51 @@ public final class Msg {
               return LAYERS.valueOf(number);
             }
           };
-    
+
     private final int value;
-    
+
     private LAYERS(int index, int value) {
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:roshan.buffer.LAYERS)
   }
-  
+
+  /**
+   * Protobuf enum {@code roshan.buffer.ITEM_ATTR}
+   */
   public enum ITEM_ATTR
       implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>SWORDATTR = 0;</code>
+     */
     SWORDATTR(0, 0),
+    /**
+     * <code>HEALATTR = 1;</code>
+     */
     HEALATTR(1, 1),
+    /**
+     * <code>BASIC_DMG = 2;</code>
+     */
     BASIC_DMG(2, 2),
     ;
-    
+
+    /**
+     * <code>SWORDATTR = 0;</code>
+     */
     public static final int SWORDATTR_VALUE = 0;
+    /**
+     * <code>HEALATTR = 1;</code>
+     */
     public static final int HEALATTR_VALUE = 1;
+    /**
+     * <code>BASIC_DMG = 2;</code>
+     */
     public static final int BASIC_DMG_VALUE = 2;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static ITEM_ATTR valueOf(int value) {
       switch (value) {
         case 0: return SWORDATTR;
@@ -230,7 +399,7 @@ public final class Msg {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<ITEM_ATTR>
         internalGetValueMap() {
       return internalValueMap;
@@ -242,28 +411,43 @@ public final class Msg {
               return ITEM_ATTR.valueOf(number);
             }
           };
-    
+
     private final int value;
-    
+
     private ITEM_ATTR(int index, int value) {
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:roshan.buffer.ITEM_ATTR)
   }
-  
+
+  /**
+   * Protobuf enum {@code roshan.buffer.CHARACTER_TYPE}
+   */
   public enum CHARACTER_TYPE
       implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>HERO = 1;</code>
+     */
     HERO(0, 1),
+    /**
+     * <code>BLOOP = 2;</code>
+     */
     BLOOP(1, 2),
     ;
-    
+
+    /**
+     * <code>HERO = 1;</code>
+     */
     public static final int HERO_VALUE = 1;
+    /**
+     * <code>BLOOP = 2;</code>
+     */
     public static final int BLOOP_VALUE = 2;
-    
-    
+
+
     public final int getNumber() { return value; }
-    
+
     public static CHARACTER_TYPE valueOf(int value) {
       switch (value) {
         case 1: return HERO;
@@ -271,7 +455,7 @@ public final class Msg {
         default: return null;
       }
     }
-    
+
     public static com.google.protobuf.Internal.EnumLiteMap<CHARACTER_TYPE>
         internalGetValueMap() {
       return internalValueMap;
@@ -283,69 +467,180 @@ public final class Msg {
               return CHARACTER_TYPE.valueOf(number);
             }
           };
-    
+
     private final int value;
-    
+
     private CHARACTER_TYPE(int index, int value) {
       this.value = value;
     }
-    
+
     // @@protoc_insertion_point(enum_scope:roshan.buffer.CHARACTER_TYPE)
   }
-  
-  public interface MapLayerOrBuilder
-      extends com.google.protobuf.MessageLiteOrBuilder {
-    
-    // repeated uint32 tile = 1 [packed = true];
+
+  public interface MapLayerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:roshan.buffer.MapLayer)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated uint32 tile = 1 [packed = true];</code>
+     */
     java.util.List<java.lang.Integer> getTileList();
+    /**
+     * <code>repeated uint32 tile = 1 [packed = true];</code>
+     */
     int getTileCount();
+    /**
+     * <code>repeated uint32 tile = 1 [packed = true];</code>
+     */
     int getTile(int index);
   }
+  /**
+   * Protobuf type {@code roshan.buffer.MapLayer}
+   *
+   * <pre>
+   * World State //
+   * </pre>
+   */
   public static final class MapLayer extends
-      com.google.protobuf.GeneratedMessageLite
-      implements MapLayerOrBuilder {
+      com.google.protobuf.GeneratedMessageLite implements
+      // @@protoc_insertion_point(message_implements:roshan.buffer.MapLayer)
+      MapLayerOrBuilder {
     // Use MapLayer.newBuilder() to construct.
-    private MapLayer(Builder builder) {
+    private MapLayer(com.google.protobuf.GeneratedMessageLite.Builder builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private MapLayer(boolean noInit) {}
-    
+    private MapLayer(boolean noInit) { this.unknownFields = com.google.protobuf.ByteString.EMPTY;}
+
     private static final MapLayer defaultInstance;
     public static MapLayer getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public MapLayer getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
-    // repeated uint32 tile = 1 [packed = true];
+
+    private final com.google.protobuf.ByteString unknownFields;
+    private MapLayer(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.ByteString.Output unknownFieldsOutput =
+          com.google.protobuf.ByteString.newOutput();
+      com.google.protobuf.CodedOutputStream unknownFieldsCodedOutput =
+          com.google.protobuf.CodedOutputStream.newInstance(
+              unknownFieldsOutput);
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFieldsCodedOutput,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                tile_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              tile_.add(input.readUInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                tile_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                tile_.add(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          tile_ = java.util.Collections.unmodifiableList(tile_);
+        }
+        try {
+          unknownFieldsCodedOutput.flush();
+        } catch (java.io.IOException e) {
+        // Should not happen
+        } finally {
+          unknownFields = unknownFieldsOutput.toByteString();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static com.google.protobuf.Parser<MapLayer> PARSER =
+        new com.google.protobuf.AbstractParser<MapLayer>() {
+      public MapLayer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MapLayer(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MapLayer> getParserForType() {
+      return PARSER;
+    }
+
     public static final int TILE_FIELD_NUMBER = 1;
     private java.util.List<java.lang.Integer> tile_;
+    /**
+     * <code>repeated uint32 tile = 1 [packed = true];</code>
+     */
     public java.util.List<java.lang.Integer>
         getTileList() {
       return tile_;
     }
+    /**
+     * <code>repeated uint32 tile = 1 [packed = true];</code>
+     */
     public int getTileCount() {
       return tile_.size();
     }
+    /**
+     * <code>repeated uint32 tile = 1 [packed = true];</code>
+     */
     public int getTile(int index) {
       return tile_.get(index);
     }
     private int tileMemoizedSerializedSize = -1;
-    
+
     private void initFields() {
-      tile_ = java.util.Collections.emptyList();;
+      tile_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -356,13 +651,14 @@ public final class Msg {
       for (int i = 0; i < tile_.size(); i++) {
         output.writeUInt32NoTag(tile_.get(i));
       }
+      output.writeRawBytes(unknownFields);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       {
         int dataSize = 0;
@@ -378,121 +674,117 @@ public final class Msg {
         }
         tileMemoizedSerializedSize = dataSize;
       }
+      size += unknownFields.size();
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static roshan.buffer.Msg.MapLayer parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.MapLayer parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapLayer parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.MapLayer parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapLayer parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.MapLayer parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapLayer parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static roshan.buffer.Msg.MapLayer parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapLayer parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.MapLayer parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(roshan.buffer.Msg.MapLayer prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
+    /**
+     * Protobuf type {@code roshan.buffer.MapLayer}
+     *
+     * <pre>
+     * World State //
+     * </pre>
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           roshan.buffer.Msg.MapLayer, Builder>
-        implements roshan.buffer.Msg.MapLayerOrBuilder {
+        implements
+        // @@protoc_insertion_point(builder_implements:roshan.buffer.MapLayer)
+        roshan.buffer.Msg.MapLayerOrBuilder {
       // Construct using roshan.buffer.Msg.MapLayer.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
+
       private void maybeForceBuilderInitialization() {
       }
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
-        tile_ = java.util.Collections.emptyList();;
+        tile_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public roshan.buffer.Msg.MapLayer getDefaultInstanceForType() {
         return roshan.buffer.Msg.MapLayer.getDefaultInstance();
       }
-      
+
       public roshan.buffer.Msg.MapLayer build() {
         roshan.buffer.Msg.MapLayer result = buildPartial();
         if (!result.isInitialized()) {
@@ -500,17 +792,7 @@ public final class Msg {
         }
         return result;
       }
-      
-      private roshan.buffer.Msg.MapLayer buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        roshan.buffer.Msg.MapLayer result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public roshan.buffer.Msg.MapLayer buildPartial() {
         roshan.buffer.Msg.MapLayer result = new roshan.buffer.Msg.MapLayer(this);
         int from_bitField0_ = bitField0_;
@@ -521,7 +803,7 @@ public final class Msg {
         result.tile_ = tile_;
         return result;
       }
-      
+
       public Builder mergeFrom(roshan.buffer.Msg.MapLayer other) {
         if (other == roshan.buffer.Msg.MapLayer.getDefaultInstance()) return this;
         if (!other.tile_.isEmpty()) {
@@ -534,68 +816,63 @@ public final class Msg {
           }
           
         }
+        setUnknownFields(
+            getUnknownFields().concat(other.unknownFields));
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              
-              return this;
-            default: {
-              if (!parseUnknownField(input, extensionRegistry, tag)) {
-                
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              ensureTileIsMutable();
-              tile_.add(input.readUInt32());
-              break;
-            }
-            case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              while (input.getBytesUntilLimit() > 0) {
-                addTile(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
+        roshan.buffer.Msg.MapLayer parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (roshan.buffer.Msg.MapLayer) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated uint32 tile = 1 [packed = true];
-      private java.util.List<java.lang.Integer> tile_ = java.util.Collections.emptyList();;
+
+      private java.util.List<java.lang.Integer> tile_ = java.util.Collections.emptyList();
       private void ensureTileIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
           tile_ = new java.util.ArrayList<java.lang.Integer>(tile_);
           bitField0_ |= 0x00000001;
          }
       }
+      /**
+       * <code>repeated uint32 tile = 1 [packed = true];</code>
+       */
       public java.util.List<java.lang.Integer>
           getTileList() {
         return java.util.Collections.unmodifiableList(tile_);
       }
+      /**
+       * <code>repeated uint32 tile = 1 [packed = true];</code>
+       */
       public int getTileCount() {
         return tile_.size();
       }
+      /**
+       * <code>repeated uint32 tile = 1 [packed = true];</code>
+       */
       public int getTile(int index) {
         return tile_.get(index);
       }
+      /**
+       * <code>repeated uint32 tile = 1 [packed = true];</code>
+       */
       public Builder setTile(
           int index, int value) {
         ensureTileIsMutable();
@@ -603,178 +880,469 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>repeated uint32 tile = 1 [packed = true];</code>
+       */
       public Builder addTile(int value) {
         ensureTileIsMutable();
         tile_.add(value);
         
         return this;
       }
+      /**
+       * <code>repeated uint32 tile = 1 [packed = true];</code>
+       */
       public Builder addAllTile(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureTileIsMutable();
-        super.addAll(values, tile_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tile_);
         
         return this;
       }
+      /**
+       * <code>repeated uint32 tile = 1 [packed = true];</code>
+       */
       public Builder clearTile() {
-        tile_ = java.util.Collections.emptyList();;
+        tile_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:roshan.buffer.MapLayer)
     }
-    
+
     static {
       defaultInstance = new MapLayer(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:roshan.buffer.MapLayer)
   }
-  
-  public interface MapDataOrBuilder
-      extends com.google.protobuf.MessageLiteOrBuilder {
-    
-    // optional string mapName = 1;
+
+  public interface MapDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:roshan.buffer.MapData)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional string mapName = 1;</code>
+     */
     boolean hasMapName();
-    String getMapName();
-    
-    // optional uint32 xOffset = 2;
+    /**
+     * <code>optional string mapName = 1;</code>
+     */
+    java.lang.String getMapName();
+    /**
+     * <code>optional string mapName = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getMapNameBytes();
+
+    /**
+     * <code>optional uint32 xOffset = 2;</code>
+     *
+     * <pre>
+     * Offset from the world
+     * </pre>
+     */
     boolean hasXOffset();
+    /**
+     * <code>optional uint32 xOffset = 2;</code>
+     *
+     * <pre>
+     * Offset from the world
+     * </pre>
+     */
     int getXOffset();
-    
-    // optional uint32 yOffset = 3;
+
+    /**
+     * <code>optional uint32 yOffset = 3;</code>
+     *
+     * <pre>
+     * Offset from the world
+     * </pre>
+     */
     boolean hasYOffset();
+    /**
+     * <code>optional uint32 yOffset = 3;</code>
+     *
+     * <pre>
+     * Offset from the world
+     * </pre>
+     */
     int getYOffset();
-    
-    // optional uint32 xSize = 4;
+
+    /**
+     * <code>optional uint32 xSize = 4;</code>
+     *
+     * <pre>
+     * Size of map
+     * </pre>
+     */
     boolean hasXSize();
+    /**
+     * <code>optional uint32 xSize = 4;</code>
+     *
+     * <pre>
+     * Size of map
+     * </pre>
+     */
     int getXSize();
-    
-    // optional uint32 ySize = 5;
+
+    /**
+     * <code>optional uint32 ySize = 5;</code>
+     *
+     * <pre>
+     * Size of map
+     * </pre>
+     */
     boolean hasYSize();
+    /**
+     * <code>optional uint32 ySize = 5;</code>
+     *
+     * <pre>
+     * Size of map
+     * </pre>
+     */
     int getYSize();
-    
-    // repeated .roshan.buffer.MapLayer layer = 6;
+
+    /**
+     * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+     *
+     * <pre>
+     * The tiles
+     * </pre>
+     */
     java.util.List<roshan.buffer.Msg.MapLayer> 
         getLayerList();
+    /**
+     * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+     *
+     * <pre>
+     * The tiles
+     * </pre>
+     */
     roshan.buffer.Msg.MapLayer getLayer(int index);
+    /**
+     * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+     *
+     * <pre>
+     * The tiles
+     * </pre>
+     */
     int getLayerCount();
   }
+  /**
+   * Protobuf type {@code roshan.buffer.MapData}
+   */
   public static final class MapData extends
-      com.google.protobuf.GeneratedMessageLite
-      implements MapDataOrBuilder {
+      com.google.protobuf.GeneratedMessageLite implements
+      // @@protoc_insertion_point(message_implements:roshan.buffer.MapData)
+      MapDataOrBuilder {
     // Use MapData.newBuilder() to construct.
-    private MapData(Builder builder) {
+    private MapData(com.google.protobuf.GeneratedMessageLite.Builder builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private MapData(boolean noInit) {}
-    
+    private MapData(boolean noInit) { this.unknownFields = com.google.protobuf.ByteString.EMPTY;}
+
     private static final MapData defaultInstance;
     public static MapData getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public MapData getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.ByteString unknownFields;
+    private MapData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.ByteString.Output unknownFieldsOutput =
+          com.google.protobuf.ByteString.newOutput();
+      com.google.protobuf.CodedOutputStream unknownFieldsCodedOutput =
+          com.google.protobuf.CodedOutputStream.newInstance(
+              unknownFieldsOutput);
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFieldsCodedOutput,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              mapName_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              xOffset_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              yOffset_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              xSize_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              ySize_ = input.readUInt32();
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                layer_ = new java.util.ArrayList<roshan.buffer.Msg.MapLayer>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              layer_.add(input.readMessage(roshan.buffer.Msg.MapLayer.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          layer_ = java.util.Collections.unmodifiableList(layer_);
+        }
+        try {
+          unknownFieldsCodedOutput.flush();
+        } catch (java.io.IOException e) {
+        // Should not happen
+        } finally {
+          unknownFields = unknownFieldsOutput.toByteString();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static com.google.protobuf.Parser<MapData> PARSER =
+        new com.google.protobuf.AbstractParser<MapData>() {
+      public MapData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MapData(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MapData> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string mapName = 1;
     public static final int MAPNAME_FIELD_NUMBER = 1;
     private java.lang.Object mapName_;
+    /**
+     * <code>optional string mapName = 1;</code>
+     */
     public boolean hasMapName() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getMapName() {
+    /**
+     * <code>optional string mapName = 1;</code>
+     */
+    public java.lang.String getMapName() {
       java.lang.Object ref = mapName_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           mapName_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getMapNameBytes() {
+    /**
+     * <code>optional string mapName = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMapNameBytes() {
       java.lang.Object ref = mapName_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         mapName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional uint32 xOffset = 2;
+
     public static final int XOFFSET_FIELD_NUMBER = 2;
     private int xOffset_;
+    /**
+     * <code>optional uint32 xOffset = 2;</code>
+     *
+     * <pre>
+     * Offset from the world
+     * </pre>
+     */
     public boolean hasXOffset() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional uint32 xOffset = 2;</code>
+     *
+     * <pre>
+     * Offset from the world
+     * </pre>
+     */
     public int getXOffset() {
       return xOffset_;
     }
-    
-    // optional uint32 yOffset = 3;
+
     public static final int YOFFSET_FIELD_NUMBER = 3;
     private int yOffset_;
+    /**
+     * <code>optional uint32 yOffset = 3;</code>
+     *
+     * <pre>
+     * Offset from the world
+     * </pre>
+     */
     public boolean hasYOffset() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional uint32 yOffset = 3;</code>
+     *
+     * <pre>
+     * Offset from the world
+     * </pre>
+     */
     public int getYOffset() {
       return yOffset_;
     }
-    
-    // optional uint32 xSize = 4;
+
     public static final int XSIZE_FIELD_NUMBER = 4;
     private int xSize_;
+    /**
+     * <code>optional uint32 xSize = 4;</code>
+     *
+     * <pre>
+     * Size of map
+     * </pre>
+     */
     public boolean hasXSize() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
+    /**
+     * <code>optional uint32 xSize = 4;</code>
+     *
+     * <pre>
+     * Size of map
+     * </pre>
+     */
     public int getXSize() {
       return xSize_;
     }
-    
-    // optional uint32 ySize = 5;
+
     public static final int YSIZE_FIELD_NUMBER = 5;
     private int ySize_;
+    /**
+     * <code>optional uint32 ySize = 5;</code>
+     *
+     * <pre>
+     * Size of map
+     * </pre>
+     */
     public boolean hasYSize() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional uint32 ySize = 5;</code>
+     *
+     * <pre>
+     * Size of map
+     * </pre>
+     */
     public int getYSize() {
       return ySize_;
     }
-    
-    // repeated .roshan.buffer.MapLayer layer = 6;
+
     public static final int LAYER_FIELD_NUMBER = 6;
     private java.util.List<roshan.buffer.Msg.MapLayer> layer_;
+    /**
+     * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+     *
+     * <pre>
+     * The tiles
+     * </pre>
+     */
     public java.util.List<roshan.buffer.Msg.MapLayer> getLayerList() {
       return layer_;
     }
+    /**
+     * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+     *
+     * <pre>
+     * The tiles
+     * </pre>
+     */
     public java.util.List<? extends roshan.buffer.Msg.MapLayerOrBuilder> 
         getLayerOrBuilderList() {
       return layer_;
     }
+    /**
+     * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+     *
+     * <pre>
+     * The tiles
+     * </pre>
+     */
     public int getLayerCount() {
       return layer_.size();
     }
+    /**
+     * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+     *
+     * <pre>
+     * The tiles
+     * </pre>
+     */
     public roshan.buffer.Msg.MapLayer getLayer(int index) {
       return layer_.get(index);
     }
+    /**
+     * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+     *
+     * <pre>
+     * The tiles
+     * </pre>
+     */
     public roshan.buffer.Msg.MapLayerOrBuilder getLayerOrBuilder(
         int index) {
       return layer_.get(index);
     }
-    
+
     private void initFields() {
       mapName_ = "";
       xOffset_ = 0;
@@ -786,12 +1354,13 @@ public final class Msg {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -813,13 +1382,14 @@ public final class Msg {
       for (int i = 0; i < layer_.size(); i++) {
         output.writeMessage(6, layer_.get(i));
       }
+      output.writeRawBytes(unknownFields);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -845,106 +1415,98 @@ public final class Msg {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, layer_.get(i));
       }
+      size += unknownFields.size();
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static roshan.buffer.Msg.MapData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.MapData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.MapData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.MapData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static roshan.buffer.Msg.MapData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.MapData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(roshan.buffer.Msg.MapData prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
+    /**
+     * Protobuf type {@code roshan.buffer.MapData}
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           roshan.buffer.Msg.MapData, Builder>
-        implements roshan.buffer.Msg.MapDataOrBuilder {
+        implements
+        // @@protoc_insertion_point(builder_implements:roshan.buffer.MapData)
+        roshan.buffer.Msg.MapDataOrBuilder {
       // Construct using roshan.buffer.Msg.MapData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
+
       private void maybeForceBuilderInitialization() {
       }
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         mapName_ = "";
@@ -961,15 +1523,15 @@ public final class Msg {
         bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public roshan.buffer.Msg.MapData getDefaultInstanceForType() {
         return roshan.buffer.Msg.MapData.getDefaultInstance();
       }
-      
+
       public roshan.buffer.Msg.MapData build() {
         roshan.buffer.Msg.MapData result = buildPartial();
         if (!result.isInitialized()) {
@@ -977,17 +1539,7 @@ public final class Msg {
         }
         return result;
       }
-      
-      private roshan.buffer.Msg.MapData buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        roshan.buffer.Msg.MapData result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public roshan.buffer.Msg.MapData buildPartial() {
         roshan.buffer.Msg.MapData result = new roshan.buffer.Msg.MapData(this);
         int from_bitField0_ = bitField0_;
@@ -1020,11 +1572,13 @@ public final class Msg {
         result.bitField0_ = to_bitField0_;
         return result;
       }
-      
+
       public Builder mergeFrom(roshan.buffer.Msg.MapData other) {
         if (other == roshan.buffer.Msg.MapData.getDefaultInstance()) return this;
         if (other.hasMapName()) {
-          setMapName(other.getMapName());
+          bitField0_ |= 0x00000001;
+          mapName_ = other.mapName_;
+          
         }
         if (other.hasXOffset()) {
           setXOffset(other.getXOffset());
@@ -1048,83 +1602,79 @@ public final class Msg {
           }
           
         }
+        setUnknownFields(
+            getUnknownFields().concat(other.unknownFields));
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              
-              return this;
-            default: {
-              if (!parseUnknownField(input, extensionRegistry, tag)) {
-                
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              mapName_ = input.readBytes();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              xOffset_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              yOffset_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-              bitField0_ |= 0x00000008;
-              xSize_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-              bitField0_ |= 0x00000010;
-              ySize_ = input.readUInt32();
-              break;
-            }
-            case 50: {
-              roshan.buffer.Msg.MapLayer.Builder subBuilder = roshan.buffer.Msg.MapLayer.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addLayer(subBuilder.buildPartial());
-              break;
-            }
+        roshan.buffer.Msg.MapData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (roshan.buffer.Msg.MapData) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional string mapName = 1;
+
       private java.lang.Object mapName_ = "";
+      /**
+       * <code>optional string mapName = 1;</code>
+       */
       public boolean hasMapName() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getMapName() {
+      /**
+       * <code>optional string mapName = 1;</code>
+       */
+      public java.lang.String getMapName() {
         java.lang.Object ref = mapName_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          mapName_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            mapName_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setMapName(String value) {
+      /**
+       * <code>optional string mapName = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMapNameBytes() {
+        java.lang.Object ref = mapName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mapName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string mapName = 1;</code>
+       */
+      public Builder setMapName(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1133,103 +1683,221 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>optional string mapName = 1;</code>
+       */
       public Builder clearMapName() {
         bitField0_ = (bitField0_ & ~0x00000001);
         mapName_ = getDefaultInstance().getMapName();
         
         return this;
       }
-      void setMapName(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string mapName = 1;</code>
+       */
+      public Builder setMapNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         mapName_ = value;
         
+        return this;
       }
-      
-      // optional uint32 xOffset = 2;
+
       private int xOffset_ ;
+      /**
+       * <code>optional uint32 xOffset = 2;</code>
+       *
+       * <pre>
+       * Offset from the world
+       * </pre>
+       */
       public boolean hasXOffset() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional uint32 xOffset = 2;</code>
+       *
+       * <pre>
+       * Offset from the world
+       * </pre>
+       */
       public int getXOffset() {
         return xOffset_;
       }
+      /**
+       * <code>optional uint32 xOffset = 2;</code>
+       *
+       * <pre>
+       * Offset from the world
+       * </pre>
+       */
       public Builder setXOffset(int value) {
         bitField0_ |= 0x00000002;
         xOffset_ = value;
         
         return this;
       }
+      /**
+       * <code>optional uint32 xOffset = 2;</code>
+       *
+       * <pre>
+       * Offset from the world
+       * </pre>
+       */
       public Builder clearXOffset() {
         bitField0_ = (bitField0_ & ~0x00000002);
         xOffset_ = 0;
         
         return this;
       }
-      
-      // optional uint32 yOffset = 3;
+
       private int yOffset_ ;
+      /**
+       * <code>optional uint32 yOffset = 3;</code>
+       *
+       * <pre>
+       * Offset from the world
+       * </pre>
+       */
       public boolean hasYOffset() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional uint32 yOffset = 3;</code>
+       *
+       * <pre>
+       * Offset from the world
+       * </pre>
+       */
       public int getYOffset() {
         return yOffset_;
       }
+      /**
+       * <code>optional uint32 yOffset = 3;</code>
+       *
+       * <pre>
+       * Offset from the world
+       * </pre>
+       */
       public Builder setYOffset(int value) {
         bitField0_ |= 0x00000004;
         yOffset_ = value;
         
         return this;
       }
+      /**
+       * <code>optional uint32 yOffset = 3;</code>
+       *
+       * <pre>
+       * Offset from the world
+       * </pre>
+       */
       public Builder clearYOffset() {
         bitField0_ = (bitField0_ & ~0x00000004);
         yOffset_ = 0;
         
         return this;
       }
-      
-      // optional uint32 xSize = 4;
+
       private int xSize_ ;
+      /**
+       * <code>optional uint32 xSize = 4;</code>
+       *
+       * <pre>
+       * Size of map
+       * </pre>
+       */
       public boolean hasXSize() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>optional uint32 xSize = 4;</code>
+       *
+       * <pre>
+       * Size of map
+       * </pre>
+       */
       public int getXSize() {
         return xSize_;
       }
+      /**
+       * <code>optional uint32 xSize = 4;</code>
+       *
+       * <pre>
+       * Size of map
+       * </pre>
+       */
       public Builder setXSize(int value) {
         bitField0_ |= 0x00000008;
         xSize_ = value;
         
         return this;
       }
+      /**
+       * <code>optional uint32 xSize = 4;</code>
+       *
+       * <pre>
+       * Size of map
+       * </pre>
+       */
       public Builder clearXSize() {
         bitField0_ = (bitField0_ & ~0x00000008);
         xSize_ = 0;
         
         return this;
       }
-      
-      // optional uint32 ySize = 5;
+
       private int ySize_ ;
+      /**
+       * <code>optional uint32 ySize = 5;</code>
+       *
+       * <pre>
+       * Size of map
+       * </pre>
+       */
       public boolean hasYSize() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>optional uint32 ySize = 5;</code>
+       *
+       * <pre>
+       * Size of map
+       * </pre>
+       */
       public int getYSize() {
         return ySize_;
       }
+      /**
+       * <code>optional uint32 ySize = 5;</code>
+       *
+       * <pre>
+       * Size of map
+       * </pre>
+       */
       public Builder setYSize(int value) {
         bitField0_ |= 0x00000010;
         ySize_ = value;
         
         return this;
       }
+      /**
+       * <code>optional uint32 ySize = 5;</code>
+       *
+       * <pre>
+       * Size of map
+       * </pre>
+       */
       public Builder clearYSize() {
         bitField0_ = (bitField0_ & ~0x00000010);
         ySize_ = 0;
         
         return this;
       }
-      
-      // repeated .roshan.buffer.MapLayer layer = 6;
+
       private java.util.List<roshan.buffer.Msg.MapLayer> layer_ =
         java.util.Collections.emptyList();
       private void ensureLayerIsMutable() {
@@ -1238,16 +1906,44 @@ public final class Msg {
           bitField0_ |= 0x00000020;
          }
       }
-      
+
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public java.util.List<roshan.buffer.Msg.MapLayer> getLayerList() {
         return java.util.Collections.unmodifiableList(layer_);
       }
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public int getLayerCount() {
         return layer_.size();
       }
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public roshan.buffer.Msg.MapLayer getLayer(int index) {
         return layer_.get(index);
       }
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public Builder setLayer(
           int index, roshan.buffer.Msg.MapLayer value) {
         if (value == null) {
@@ -1255,25 +1951,46 @@ public final class Msg {
         }
         ensureLayerIsMutable();
         layer_.set(index, value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public Builder setLayer(
           int index, roshan.buffer.Msg.MapLayer.Builder builderForValue) {
         ensureLayerIsMutable();
         layer_.set(index, builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public Builder addLayer(roshan.buffer.Msg.MapLayer value) {
         if (value == null) {
           throw new NullPointerException();
         }
         ensureLayerIsMutable();
         layer_.add(value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public Builder addLayer(
           int index, roshan.buffer.Msg.MapLayer value) {
         if (value == null) {
@@ -1281,208 +1998,523 @@ public final class Msg {
         }
         ensureLayerIsMutable();
         layer_.add(index, value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public Builder addLayer(
           roshan.buffer.Msg.MapLayer.Builder builderForValue) {
         ensureLayerIsMutable();
         layer_.add(builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public Builder addLayer(
           int index, roshan.buffer.Msg.MapLayer.Builder builderForValue) {
         ensureLayerIsMutable();
         layer_.add(index, builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public Builder addAllLayer(
           java.lang.Iterable<? extends roshan.buffer.Msg.MapLayer> values) {
         ensureLayerIsMutable();
-        super.addAll(values, layer_);
-        
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, layer_);
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public Builder clearLayer() {
         layer_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000020);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapLayer layer = 6;</code>
+       *
+       * <pre>
+       * The tiles
+       * </pre>
+       */
       public Builder removeLayer(int index) {
         ensureLayerIsMutable();
         layer_.remove(index);
-        
+
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:roshan.buffer.MapData)
     }
-    
+
     static {
       defaultInstance = new MapData(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:roshan.buffer.MapData)
   }
-  
-  public interface MapChangeOrBuilder
-      extends com.google.protobuf.MessageLiteOrBuilder {
-    
-    // required .roshan.buffer.CHANGE change = 1;
+
+  public interface MapChangeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:roshan.buffer.MapChange)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>required .roshan.buffer.CHANGE change = 1;</code>
+     */
     boolean hasChange();
+    /**
+     * <code>required .roshan.buffer.CHANGE change = 1;</code>
+     */
     roshan.buffer.Msg.CHANGE getChange();
-    
-    // required uint32 MapBoxX = 2;
+
+    /**
+     * <code>required uint32 MapBoxX = 2;</code>
+     */
     boolean hasMapBoxX();
+    /**
+     * <code>required uint32 MapBoxX = 2;</code>
+     */
     int getMapBoxX();
-    
-    // required uint32 MapBoxY = 3;
+
+    /**
+     * <code>required uint32 MapBoxY = 3;</code>
+     */
     boolean hasMapBoxY();
+    /**
+     * <code>required uint32 MapBoxY = 3;</code>
+     */
     int getMapBoxY();
-    
-    // repeated uint32 ChangedXs = 4;
+
+    /**
+     * <code>repeated uint32 ChangedXs = 4;</code>
+     */
     java.util.List<java.lang.Integer> getChangedXsList();
+    /**
+     * <code>repeated uint32 ChangedXs = 4;</code>
+     */
     int getChangedXsCount();
+    /**
+     * <code>repeated uint32 ChangedXs = 4;</code>
+     */
     int getChangedXs(int index);
-    
-    // repeated uint32 ChangedYs = 5;
+
+    /**
+     * <code>repeated uint32 ChangedYs = 5;</code>
+     */
     java.util.List<java.lang.Integer> getChangedYsList();
+    /**
+     * <code>repeated uint32 ChangedYs = 5;</code>
+     */
     int getChangedYsCount();
+    /**
+     * <code>repeated uint32 ChangedYs = 5;</code>
+     */
     int getChangedYs(int index);
-    
-    // repeated uint32 ChangedLayers = 6;
+
+    /**
+     * <code>repeated uint32 ChangedLayers = 6;</code>
+     */
     java.util.List<java.lang.Integer> getChangedLayersList();
+    /**
+     * <code>repeated uint32 ChangedLayers = 6;</code>
+     */
     int getChangedLayersCount();
+    /**
+     * <code>repeated uint32 ChangedLayers = 6;</code>
+     */
     int getChangedLayers(int index);
-    
-    // repeated uint32 newTile = 7;
+
+    /**
+     * <code>repeated uint32 newTile = 7;</code>
+     */
     java.util.List<java.lang.Integer> getNewTileList();
+    /**
+     * <code>repeated uint32 newTile = 7;</code>
+     */
     int getNewTileCount();
+    /**
+     * <code>repeated uint32 newTile = 7;</code>
+     */
     int getNewTile(int index);
   }
+  /**
+   * Protobuf type {@code roshan.buffer.MapChange}
+   */
   public static final class MapChange extends
-      com.google.protobuf.GeneratedMessageLite
-      implements MapChangeOrBuilder {
+      com.google.protobuf.GeneratedMessageLite implements
+      // @@protoc_insertion_point(message_implements:roshan.buffer.MapChange)
+      MapChangeOrBuilder {
     // Use MapChange.newBuilder() to construct.
-    private MapChange(Builder builder) {
+    private MapChange(com.google.protobuf.GeneratedMessageLite.Builder builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private MapChange(boolean noInit) {}
-    
+    private MapChange(boolean noInit) { this.unknownFields = com.google.protobuf.ByteString.EMPTY;}
+
     private static final MapChange defaultInstance;
     public static MapChange getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public MapChange getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.ByteString unknownFields;
+    private MapChange(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.ByteString.Output unknownFieldsOutput =
+          com.google.protobuf.ByteString.newOutput();
+      com.google.protobuf.CodedOutputStream unknownFieldsCodedOutput =
+          com.google.protobuf.CodedOutputStream.newInstance(
+              unknownFieldsOutput);
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFieldsCodedOutput,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              roshan.buffer.Msg.CHANGE value = roshan.buffer.Msg.CHANGE.valueOf(rawValue);
+              if (value == null) {
+                unknownFieldsCodedOutput.writeRawVarint32(tag);
+                unknownFieldsCodedOutput.writeRawVarint32(rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                change_ = value;
+              }
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              mapBoxX_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              mapBoxY_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                changedXs_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              changedXs_.add(input.readUInt32());
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008) && input.getBytesUntilLimit() > 0) {
+                changedXs_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                changedXs_.add(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 40: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                changedYs_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              changedYs_.add(input.readUInt32());
+              break;
+            }
+            case 42: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010) && input.getBytesUntilLimit() > 0) {
+                changedYs_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                changedYs_.add(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 48: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                changedLayers_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              changedLayers_.add(input.readUInt32());
+              break;
+            }
+            case 50: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020) && input.getBytesUntilLimit() > 0) {
+                changedLayers_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                changedLayers_.add(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 56: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                newTile_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              newTile_.add(input.readUInt32());
+              break;
+            }
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040) && input.getBytesUntilLimit() > 0) {
+                newTile_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                newTile_.add(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          changedXs_ = java.util.Collections.unmodifiableList(changedXs_);
+        }
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          changedYs_ = java.util.Collections.unmodifiableList(changedYs_);
+        }
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          changedLayers_ = java.util.Collections.unmodifiableList(changedLayers_);
+        }
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          newTile_ = java.util.Collections.unmodifiableList(newTile_);
+        }
+        try {
+          unknownFieldsCodedOutput.flush();
+        } catch (java.io.IOException e) {
+        // Should not happen
+        } finally {
+          unknownFields = unknownFieldsOutput.toByteString();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static com.google.protobuf.Parser<MapChange> PARSER =
+        new com.google.protobuf.AbstractParser<MapChange>() {
+      public MapChange parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MapChange(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MapChange> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required .roshan.buffer.CHANGE change = 1;
     public static final int CHANGE_FIELD_NUMBER = 1;
     private roshan.buffer.Msg.CHANGE change_;
+    /**
+     * <code>required .roshan.buffer.CHANGE change = 1;</code>
+     */
     public boolean hasChange() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required .roshan.buffer.CHANGE change = 1;</code>
+     */
     public roshan.buffer.Msg.CHANGE getChange() {
       return change_;
     }
-    
-    // required uint32 MapBoxX = 2;
+
     public static final int MAPBOXX_FIELD_NUMBER = 2;
     private int mapBoxX_;
+    /**
+     * <code>required uint32 MapBoxX = 2;</code>
+     */
     public boolean hasMapBoxX() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>required uint32 MapBoxX = 2;</code>
+     */
     public int getMapBoxX() {
       return mapBoxX_;
     }
-    
-    // required uint32 MapBoxY = 3;
+
     public static final int MAPBOXY_FIELD_NUMBER = 3;
     private int mapBoxY_;
+    /**
+     * <code>required uint32 MapBoxY = 3;</code>
+     */
     public boolean hasMapBoxY() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>required uint32 MapBoxY = 3;</code>
+     */
     public int getMapBoxY() {
       return mapBoxY_;
     }
-    
-    // repeated uint32 ChangedXs = 4;
+
     public static final int CHANGEDXS_FIELD_NUMBER = 4;
     private java.util.List<java.lang.Integer> changedXs_;
+    /**
+     * <code>repeated uint32 ChangedXs = 4;</code>
+     */
     public java.util.List<java.lang.Integer>
         getChangedXsList() {
       return changedXs_;
     }
+    /**
+     * <code>repeated uint32 ChangedXs = 4;</code>
+     */
     public int getChangedXsCount() {
       return changedXs_.size();
     }
+    /**
+     * <code>repeated uint32 ChangedXs = 4;</code>
+     */
     public int getChangedXs(int index) {
       return changedXs_.get(index);
     }
-    
-    // repeated uint32 ChangedYs = 5;
+
     public static final int CHANGEDYS_FIELD_NUMBER = 5;
     private java.util.List<java.lang.Integer> changedYs_;
+    /**
+     * <code>repeated uint32 ChangedYs = 5;</code>
+     */
     public java.util.List<java.lang.Integer>
         getChangedYsList() {
       return changedYs_;
     }
+    /**
+     * <code>repeated uint32 ChangedYs = 5;</code>
+     */
     public int getChangedYsCount() {
       return changedYs_.size();
     }
+    /**
+     * <code>repeated uint32 ChangedYs = 5;</code>
+     */
     public int getChangedYs(int index) {
       return changedYs_.get(index);
     }
-    
-    // repeated uint32 ChangedLayers = 6;
+
     public static final int CHANGEDLAYERS_FIELD_NUMBER = 6;
     private java.util.List<java.lang.Integer> changedLayers_;
+    /**
+     * <code>repeated uint32 ChangedLayers = 6;</code>
+     */
     public java.util.List<java.lang.Integer>
         getChangedLayersList() {
       return changedLayers_;
     }
+    /**
+     * <code>repeated uint32 ChangedLayers = 6;</code>
+     */
     public int getChangedLayersCount() {
       return changedLayers_.size();
     }
+    /**
+     * <code>repeated uint32 ChangedLayers = 6;</code>
+     */
     public int getChangedLayers(int index) {
       return changedLayers_.get(index);
     }
-    
-    // repeated uint32 newTile = 7;
+
     public static final int NEWTILE_FIELD_NUMBER = 7;
     private java.util.List<java.lang.Integer> newTile_;
+    /**
+     * <code>repeated uint32 newTile = 7;</code>
+     */
     public java.util.List<java.lang.Integer>
         getNewTileList() {
       return newTile_;
     }
+    /**
+     * <code>repeated uint32 newTile = 7;</code>
+     */
     public int getNewTileCount() {
       return newTile_.size();
     }
+    /**
+     * <code>repeated uint32 newTile = 7;</code>
+     */
     public int getNewTile(int index) {
       return newTile_.get(index);
     }
-    
+
     private void initFields() {
       change_ = roshan.buffer.Msg.CHANGE.Clear;
       mapBoxX_ = 0;
       mapBoxY_ = 0;
-      changedXs_ = java.util.Collections.emptyList();;
-      changedYs_ = java.util.Collections.emptyList();;
-      changedLayers_ = java.util.Collections.emptyList();;
-      newTile_ = java.util.Collections.emptyList();;
+      changedXs_ = java.util.Collections.emptyList();
+      changedYs_ = java.util.Collections.emptyList();
+      changedLayers_ = java.util.Collections.emptyList();
+      newTile_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasChange()) {
         memoizedIsInitialized = 0;
         return false;
@@ -1498,7 +2530,7 @@ public final class Msg {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1523,13 +2555,14 @@ public final class Msg {
       for (int i = 0; i < newTile_.size(); i++) {
         output.writeUInt32(7, newTile_.get(i));
       }
+      output.writeRawBytes(unknownFields);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1579,106 +2612,98 @@ public final class Msg {
         size += dataSize;
         size += 1 * getNewTileList().size();
       }
+      size += unknownFields.size();
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static roshan.buffer.Msg.MapChange parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.MapChange parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapChange parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.MapChange parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapChange parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.MapChange parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapChange parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static roshan.buffer.Msg.MapChange parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.MapChange parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.MapChange parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(roshan.buffer.Msg.MapChange prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
+    /**
+     * Protobuf type {@code roshan.buffer.MapChange}
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           roshan.buffer.Msg.MapChange, Builder>
-        implements roshan.buffer.Msg.MapChangeOrBuilder {
+        implements
+        // @@protoc_insertion_point(builder_implements:roshan.buffer.MapChange)
+        roshan.buffer.Msg.MapChangeOrBuilder {
       // Construct using roshan.buffer.Msg.MapChange.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
+
       private void maybeForceBuilderInitialization() {
       }
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         change_ = roshan.buffer.Msg.CHANGE.Clear;
@@ -1687,25 +2712,25 @@ public final class Msg {
         bitField0_ = (bitField0_ & ~0x00000002);
         mapBoxY_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
-        changedXs_ = java.util.Collections.emptyList();;
+        changedXs_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
-        changedYs_ = java.util.Collections.emptyList();;
+        changedYs_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000010);
-        changedLayers_ = java.util.Collections.emptyList();;
+        changedLayers_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000020);
-        newTile_ = java.util.Collections.emptyList();;
+        newTile_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public roshan.buffer.Msg.MapChange getDefaultInstanceForType() {
         return roshan.buffer.Msg.MapChange.getDefaultInstance();
       }
-      
+
       public roshan.buffer.Msg.MapChange build() {
         roshan.buffer.Msg.MapChange result = buildPartial();
         if (!result.isInitialized()) {
@@ -1713,17 +2738,7 @@ public final class Msg {
         }
         return result;
       }
-      
-      private roshan.buffer.Msg.MapChange buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        roshan.buffer.Msg.MapChange result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public roshan.buffer.Msg.MapChange buildPartial() {
         roshan.buffer.Msg.MapChange result = new roshan.buffer.Msg.MapChange(this);
         int from_bitField0_ = bitField0_;
@@ -1763,7 +2778,7 @@ public final class Msg {
         result.bitField0_ = to_bitField0_;
         return result;
       }
-      
+
       public Builder mergeFrom(roshan.buffer.Msg.MapChange other) {
         if (other == roshan.buffer.Msg.MapChange.getDefaultInstance()) return this;
         if (other.hasChange()) {
@@ -1815,9 +2830,11 @@ public final class Msg {
           }
           
         }
+        setUnknownFields(
+            getUnknownFields().concat(other.unknownFields));
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasChange()) {
           
@@ -1833,113 +2850,42 @@ public final class Msg {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              
-              return this;
-            default: {
-              if (!parseUnknownField(input, extensionRegistry, tag)) {
-                
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              int rawValue = input.readEnum();
-              roshan.buffer.Msg.CHANGE value = roshan.buffer.Msg.CHANGE.valueOf(rawValue);
-              if (value != null) {
-                bitField0_ |= 0x00000001;
-                change_ = value;
-              }
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              mapBoxX_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              mapBoxY_ = input.readUInt32();
-              break;
-            }
-            case 32: {
-              ensureChangedXsIsMutable();
-              changedXs_.add(input.readUInt32());
-              break;
-            }
-            case 34: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              while (input.getBytesUntilLimit() > 0) {
-                addChangedXs(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 40: {
-              ensureChangedYsIsMutable();
-              changedYs_.add(input.readUInt32());
-              break;
-            }
-            case 42: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              while (input.getBytesUntilLimit() > 0) {
-                addChangedYs(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 48: {
-              ensureChangedLayersIsMutable();
-              changedLayers_.add(input.readUInt32());
-              break;
-            }
-            case 50: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              while (input.getBytesUntilLimit() > 0) {
-                addChangedLayers(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            case 56: {
-              ensureNewTileIsMutable();
-              newTile_.add(input.readUInt32());
-              break;
-            }
-            case 58: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              while (input.getBytesUntilLimit() > 0) {
-                addNewTile(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
+        roshan.buffer.Msg.MapChange parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (roshan.buffer.Msg.MapChange) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required .roshan.buffer.CHANGE change = 1;
+
       private roshan.buffer.Msg.CHANGE change_ = roshan.buffer.Msg.CHANGE.Clear;
+      /**
+       * <code>required .roshan.buffer.CHANGE change = 1;</code>
+       */
       public boolean hasChange() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required .roshan.buffer.CHANGE change = 1;</code>
+       */
       public roshan.buffer.Msg.CHANGE getChange() {
         return change_;
       }
+      /**
+       * <code>required .roshan.buffer.CHANGE change = 1;</code>
+       */
       public Builder setChange(roshan.buffer.Msg.CHANGE value) {
         if (value == null) {
           throw new NullPointerException();
@@ -1949,73 +2895,109 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>required .roshan.buffer.CHANGE change = 1;</code>
+       */
       public Builder clearChange() {
         bitField0_ = (bitField0_ & ~0x00000001);
         change_ = roshan.buffer.Msg.CHANGE.Clear;
         
         return this;
       }
-      
-      // required uint32 MapBoxX = 2;
+
       private int mapBoxX_ ;
+      /**
+       * <code>required uint32 MapBoxX = 2;</code>
+       */
       public boolean hasMapBoxX() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>required uint32 MapBoxX = 2;</code>
+       */
       public int getMapBoxX() {
         return mapBoxX_;
       }
+      /**
+       * <code>required uint32 MapBoxX = 2;</code>
+       */
       public Builder setMapBoxX(int value) {
         bitField0_ |= 0x00000002;
         mapBoxX_ = value;
         
         return this;
       }
+      /**
+       * <code>required uint32 MapBoxX = 2;</code>
+       */
       public Builder clearMapBoxX() {
         bitField0_ = (bitField0_ & ~0x00000002);
         mapBoxX_ = 0;
         
         return this;
       }
-      
-      // required uint32 MapBoxY = 3;
+
       private int mapBoxY_ ;
+      /**
+       * <code>required uint32 MapBoxY = 3;</code>
+       */
       public boolean hasMapBoxY() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>required uint32 MapBoxY = 3;</code>
+       */
       public int getMapBoxY() {
         return mapBoxY_;
       }
+      /**
+       * <code>required uint32 MapBoxY = 3;</code>
+       */
       public Builder setMapBoxY(int value) {
         bitField0_ |= 0x00000004;
         mapBoxY_ = value;
         
         return this;
       }
+      /**
+       * <code>required uint32 MapBoxY = 3;</code>
+       */
       public Builder clearMapBoxY() {
         bitField0_ = (bitField0_ & ~0x00000004);
         mapBoxY_ = 0;
         
         return this;
       }
-      
-      // repeated uint32 ChangedXs = 4;
-      private java.util.List<java.lang.Integer> changedXs_ = java.util.Collections.emptyList();;
+
+      private java.util.List<java.lang.Integer> changedXs_ = java.util.Collections.emptyList();
       private void ensureChangedXsIsMutable() {
         if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           changedXs_ = new java.util.ArrayList<java.lang.Integer>(changedXs_);
           bitField0_ |= 0x00000008;
          }
       }
+      /**
+       * <code>repeated uint32 ChangedXs = 4;</code>
+       */
       public java.util.List<java.lang.Integer>
           getChangedXsList() {
         return java.util.Collections.unmodifiableList(changedXs_);
       }
+      /**
+       * <code>repeated uint32 ChangedXs = 4;</code>
+       */
       public int getChangedXsCount() {
         return changedXs_.size();
       }
+      /**
+       * <code>repeated uint32 ChangedXs = 4;</code>
+       */
       public int getChangedXs(int index) {
         return changedXs_.get(index);
       }
+      /**
+       * <code>repeated uint32 ChangedXs = 4;</code>
+       */
       public Builder setChangedXs(
           int index, int value) {
         ensureChangedXsIsMutable();
@@ -2023,44 +3005,65 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>repeated uint32 ChangedXs = 4;</code>
+       */
       public Builder addChangedXs(int value) {
         ensureChangedXsIsMutable();
         changedXs_.add(value);
         
         return this;
       }
+      /**
+       * <code>repeated uint32 ChangedXs = 4;</code>
+       */
       public Builder addAllChangedXs(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureChangedXsIsMutable();
-        super.addAll(values, changedXs_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, changedXs_);
         
         return this;
       }
+      /**
+       * <code>repeated uint32 ChangedXs = 4;</code>
+       */
       public Builder clearChangedXs() {
-        changedXs_ = java.util.Collections.emptyList();;
+        changedXs_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000008);
         
         return this;
       }
-      
-      // repeated uint32 ChangedYs = 5;
-      private java.util.List<java.lang.Integer> changedYs_ = java.util.Collections.emptyList();;
+
+      private java.util.List<java.lang.Integer> changedYs_ = java.util.Collections.emptyList();
       private void ensureChangedYsIsMutable() {
         if (!((bitField0_ & 0x00000010) == 0x00000010)) {
           changedYs_ = new java.util.ArrayList<java.lang.Integer>(changedYs_);
           bitField0_ |= 0x00000010;
          }
       }
+      /**
+       * <code>repeated uint32 ChangedYs = 5;</code>
+       */
       public java.util.List<java.lang.Integer>
           getChangedYsList() {
         return java.util.Collections.unmodifiableList(changedYs_);
       }
+      /**
+       * <code>repeated uint32 ChangedYs = 5;</code>
+       */
       public int getChangedYsCount() {
         return changedYs_.size();
       }
+      /**
+       * <code>repeated uint32 ChangedYs = 5;</code>
+       */
       public int getChangedYs(int index) {
         return changedYs_.get(index);
       }
+      /**
+       * <code>repeated uint32 ChangedYs = 5;</code>
+       */
       public Builder setChangedYs(
           int index, int value) {
         ensureChangedYsIsMutable();
@@ -2068,44 +3071,65 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>repeated uint32 ChangedYs = 5;</code>
+       */
       public Builder addChangedYs(int value) {
         ensureChangedYsIsMutable();
         changedYs_.add(value);
         
         return this;
       }
+      /**
+       * <code>repeated uint32 ChangedYs = 5;</code>
+       */
       public Builder addAllChangedYs(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureChangedYsIsMutable();
-        super.addAll(values, changedYs_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, changedYs_);
         
         return this;
       }
+      /**
+       * <code>repeated uint32 ChangedYs = 5;</code>
+       */
       public Builder clearChangedYs() {
-        changedYs_ = java.util.Collections.emptyList();;
+        changedYs_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000010);
         
         return this;
       }
-      
-      // repeated uint32 ChangedLayers = 6;
-      private java.util.List<java.lang.Integer> changedLayers_ = java.util.Collections.emptyList();;
+
+      private java.util.List<java.lang.Integer> changedLayers_ = java.util.Collections.emptyList();
       private void ensureChangedLayersIsMutable() {
         if (!((bitField0_ & 0x00000020) == 0x00000020)) {
           changedLayers_ = new java.util.ArrayList<java.lang.Integer>(changedLayers_);
           bitField0_ |= 0x00000020;
          }
       }
+      /**
+       * <code>repeated uint32 ChangedLayers = 6;</code>
+       */
       public java.util.List<java.lang.Integer>
           getChangedLayersList() {
         return java.util.Collections.unmodifiableList(changedLayers_);
       }
+      /**
+       * <code>repeated uint32 ChangedLayers = 6;</code>
+       */
       public int getChangedLayersCount() {
         return changedLayers_.size();
       }
+      /**
+       * <code>repeated uint32 ChangedLayers = 6;</code>
+       */
       public int getChangedLayers(int index) {
         return changedLayers_.get(index);
       }
+      /**
+       * <code>repeated uint32 ChangedLayers = 6;</code>
+       */
       public Builder setChangedLayers(
           int index, int value) {
         ensureChangedLayersIsMutable();
@@ -2113,44 +3137,65 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>repeated uint32 ChangedLayers = 6;</code>
+       */
       public Builder addChangedLayers(int value) {
         ensureChangedLayersIsMutable();
         changedLayers_.add(value);
         
         return this;
       }
+      /**
+       * <code>repeated uint32 ChangedLayers = 6;</code>
+       */
       public Builder addAllChangedLayers(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureChangedLayersIsMutable();
-        super.addAll(values, changedLayers_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, changedLayers_);
         
         return this;
       }
+      /**
+       * <code>repeated uint32 ChangedLayers = 6;</code>
+       */
       public Builder clearChangedLayers() {
-        changedLayers_ = java.util.Collections.emptyList();;
+        changedLayers_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000020);
         
         return this;
       }
-      
-      // repeated uint32 newTile = 7;
-      private java.util.List<java.lang.Integer> newTile_ = java.util.Collections.emptyList();;
+
+      private java.util.List<java.lang.Integer> newTile_ = java.util.Collections.emptyList();
       private void ensureNewTileIsMutable() {
         if (!((bitField0_ & 0x00000040) == 0x00000040)) {
           newTile_ = new java.util.ArrayList<java.lang.Integer>(newTile_);
           bitField0_ |= 0x00000040;
          }
       }
+      /**
+       * <code>repeated uint32 newTile = 7;</code>
+       */
       public java.util.List<java.lang.Integer>
           getNewTileList() {
         return java.util.Collections.unmodifiableList(newTile_);
       }
+      /**
+       * <code>repeated uint32 newTile = 7;</code>
+       */
       public int getNewTileCount() {
         return newTile_.size();
       }
+      /**
+       * <code>repeated uint32 newTile = 7;</code>
+       */
       public int getNewTile(int index) {
         return newTile_.get(index);
       }
+      /**
+       * <code>repeated uint32 newTile = 7;</code>
+       */
       public Builder setNewTile(
           int index, int value) {
         ensureNewTileIsMutable();
@@ -2158,221 +3203,472 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>repeated uint32 newTile = 7;</code>
+       */
       public Builder addNewTile(int value) {
         ensureNewTileIsMutable();
         newTile_.add(value);
         
         return this;
       }
+      /**
+       * <code>repeated uint32 newTile = 7;</code>
+       */
       public Builder addAllNewTile(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureNewTileIsMutable();
-        super.addAll(values, newTile_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, newTile_);
         
         return this;
       }
+      /**
+       * <code>repeated uint32 newTile = 7;</code>
+       */
       public Builder clearNewTile() {
-        newTile_ = java.util.Collections.emptyList();;
+        newTile_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000040);
         
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:roshan.buffer.MapChange)
     }
-    
+
     static {
       defaultInstance = new MapChange(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:roshan.buffer.MapChange)
   }
-  
-  public interface CharacterActionOrBuilder
-      extends com.google.protobuf.MessageLiteOrBuilder {
-    
-    // required uint32 id = 1;
+
+  public interface CharacterActionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:roshan.buffer.CharacterAction)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>required uint32 id = 1;</code>
+     */
     boolean hasId();
+    /**
+     * <code>required uint32 id = 1;</code>
+     */
     int getId();
-    
-    // optional sint32 x = 2;
+
+    /**
+     * <code>optional sint32 x = 2;</code>
+     */
     boolean hasX();
+    /**
+     * <code>optional sint32 x = 2;</code>
+     */
     int getX();
-    
-    // optional sint32 y = 3;
+
+    /**
+     * <code>optional sint32 y = 3;</code>
+     */
     boolean hasY();
+    /**
+     * <code>optional sint32 y = 3;</code>
+     */
     int getY();
-    
-    // optional string say = 4;
+
+    /**
+     * <code>optional string say = 4;</code>
+     */
     boolean hasSay();
-    String getSay();
-    
-    // optional bool walk = 7;
+    /**
+     * <code>optional string say = 4;</code>
+     */
+    java.lang.String getSay();
+    /**
+     * <code>optional string say = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getSayBytes();
+
+    /**
+     * <code>optional bool walk = 7;</code>
+     */
     boolean hasWalk();
+    /**
+     * <code>optional bool walk = 7;</code>
+     */
     boolean getWalk();
-    
-    // optional uint32 direction = 8;
+
+    /**
+     * <code>optional uint32 direction = 8;</code>
+     */
     boolean hasDirection();
+    /**
+     * <code>optional uint32 direction = 8;</code>
+     */
     int getDirection();
-    
-    // optional .roshan.buffer.ACTION action = 9;
+
+    /**
+     * <code>optional .roshan.buffer.ACTION action = 9;</code>
+     */
     boolean hasAction();
+    /**
+     * <code>optional .roshan.buffer.ACTION action = 9;</code>
+     */
     roshan.buffer.Msg.ACTION getAction();
-    
-    // optional bool isYou = 11;
+
+    /**
+     * <code>optional bool isYou = 11;</code>
+     */
     boolean hasIsYou();
+    /**
+     * <code>optional bool isYou = 11;</code>
+     */
     boolean getIsYou();
-    
-    // optional bool gone = 12;
+
+    /**
+     * <code>optional bool gone = 12;</code>
+     */
     boolean hasGone();
+    /**
+     * <code>optional bool gone = 12;</code>
+     */
     boolean getGone();
-    
-    // optional .roshan.buffer.CHARACTER_TYPE characterType = 13;
+
+    /**
+     * <code>optional .roshan.buffer.CHARACTER_TYPE characterType = 13;</code>
+     */
     boolean hasCharacterType();
+    /**
+     * <code>optional .roshan.buffer.CHARACTER_TYPE characterType = 13;</code>
+     */
     roshan.buffer.Msg.CHARACTER_TYPE getCharacterType();
   }
+  /**
+   * Protobuf type {@code roshan.buffer.CharacterAction}
+   */
   public static final class CharacterAction extends
-      com.google.protobuf.GeneratedMessageLite
-      implements CharacterActionOrBuilder {
+      com.google.protobuf.GeneratedMessageLite implements
+      // @@protoc_insertion_point(message_implements:roshan.buffer.CharacterAction)
+      CharacterActionOrBuilder {
     // Use CharacterAction.newBuilder() to construct.
-    private CharacterAction(Builder builder) {
+    private CharacterAction(com.google.protobuf.GeneratedMessageLite.Builder builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private CharacterAction(boolean noInit) {}
-    
+    private CharacterAction(boolean noInit) { this.unknownFields = com.google.protobuf.ByteString.EMPTY;}
+
     private static final CharacterAction defaultInstance;
     public static CharacterAction getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public CharacterAction getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.ByteString unknownFields;
+    private CharacterAction(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.ByteString.Output unknownFieldsOutput =
+          com.google.protobuf.ByteString.newOutput();
+      com.google.protobuf.CodedOutputStream unknownFieldsCodedOutput =
+          com.google.protobuf.CodedOutputStream.newInstance(
+              unknownFieldsOutput);
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFieldsCodedOutput,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              x_ = input.readSInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              y_ = input.readSInt32();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000008;
+              say_ = bs;
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000010;
+              walk_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000020;
+              direction_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+              roshan.buffer.Msg.ACTION value = roshan.buffer.Msg.ACTION.valueOf(rawValue);
+              if (value == null) {
+                unknownFieldsCodedOutput.writeRawVarint32(tag);
+                unknownFieldsCodedOutput.writeRawVarint32(rawValue);
+              } else {
+                bitField0_ |= 0x00000040;
+                action_ = value;
+              }
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000080;
+              isYou_ = input.readBool();
+              break;
+            }
+            case 96: {
+              bitField0_ |= 0x00000100;
+              gone_ = input.readBool();
+              break;
+            }
+            case 104: {
+              int rawValue = input.readEnum();
+              roshan.buffer.Msg.CHARACTER_TYPE value = roshan.buffer.Msg.CHARACTER_TYPE.valueOf(rawValue);
+              if (value == null) {
+                unknownFieldsCodedOutput.writeRawVarint32(tag);
+                unknownFieldsCodedOutput.writeRawVarint32(rawValue);
+              } else {
+                bitField0_ |= 0x00000200;
+                characterType_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        try {
+          unknownFieldsCodedOutput.flush();
+        } catch (java.io.IOException e) {
+        // Should not happen
+        } finally {
+          unknownFields = unknownFieldsOutput.toByteString();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static com.google.protobuf.Parser<CharacterAction> PARSER =
+        new com.google.protobuf.AbstractParser<CharacterAction>() {
+      public CharacterAction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CharacterAction(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CharacterAction> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // required uint32 id = 1;
     public static final int ID_FIELD_NUMBER = 1;
     private int id_;
+    /**
+     * <code>required uint32 id = 1;</code>
+     */
     public boolean hasId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>required uint32 id = 1;</code>
+     */
     public int getId() {
       return id_;
     }
-    
-    // optional sint32 x = 2;
+
     public static final int X_FIELD_NUMBER = 2;
     private int x_;
+    /**
+     * <code>optional sint32 x = 2;</code>
+     */
     public boolean hasX() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional sint32 x = 2;</code>
+     */
     public int getX() {
       return x_;
     }
-    
-    // optional sint32 y = 3;
+
     public static final int Y_FIELD_NUMBER = 3;
     private int y_;
+    /**
+     * <code>optional sint32 y = 3;</code>
+     */
     public boolean hasY() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
+    /**
+     * <code>optional sint32 y = 3;</code>
+     */
     public int getY() {
       return y_;
     }
-    
-    // optional string say = 4;
+
     public static final int SAY_FIELD_NUMBER = 4;
     private java.lang.Object say_;
+    /**
+     * <code>optional string say = 4;</code>
+     */
     public boolean hasSay() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getSay() {
+    /**
+     * <code>optional string say = 4;</code>
+     */
+    public java.lang.String getSay() {
       java.lang.Object ref = say_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           say_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSayBytes() {
+    /**
+     * <code>optional string say = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSayBytes() {
       java.lang.Object ref = say_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         say_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional bool walk = 7;
+
     public static final int WALK_FIELD_NUMBER = 7;
     private boolean walk_;
+    /**
+     * <code>optional bool walk = 7;</code>
+     */
     public boolean hasWalk() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional bool walk = 7;</code>
+     */
     public boolean getWalk() {
       return walk_;
     }
-    
-    // optional uint32 direction = 8;
+
     public static final int DIRECTION_FIELD_NUMBER = 8;
     private int direction_;
+    /**
+     * <code>optional uint32 direction = 8;</code>
+     */
     public boolean hasDirection() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>optional uint32 direction = 8;</code>
+     */
     public int getDirection() {
       return direction_;
     }
-    
-    // optional .roshan.buffer.ACTION action = 9;
+
     public static final int ACTION_FIELD_NUMBER = 9;
     private roshan.buffer.Msg.ACTION action_;
+    /**
+     * <code>optional .roshan.buffer.ACTION action = 9;</code>
+     */
     public boolean hasAction() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
+    /**
+     * <code>optional .roshan.buffer.ACTION action = 9;</code>
+     */
     public roshan.buffer.Msg.ACTION getAction() {
       return action_;
     }
-    
-    // optional bool isYou = 11;
+
     public static final int ISYOU_FIELD_NUMBER = 11;
     private boolean isYou_;
+    /**
+     * <code>optional bool isYou = 11;</code>
+     */
     public boolean hasIsYou() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
+    /**
+     * <code>optional bool isYou = 11;</code>
+     */
     public boolean getIsYou() {
       return isYou_;
     }
-    
-    // optional bool gone = 12;
+
     public static final int GONE_FIELD_NUMBER = 12;
     private boolean gone_;
+    /**
+     * <code>optional bool gone = 12;</code>
+     */
     public boolean hasGone() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
+    /**
+     * <code>optional bool gone = 12;</code>
+     */
     public boolean getGone() {
       return gone_;
     }
-    
-    // optional .roshan.buffer.CHARACTER_TYPE characterType = 13;
+
     public static final int CHARACTERTYPE_FIELD_NUMBER = 13;
     private roshan.buffer.Msg.CHARACTER_TYPE characterType_;
+    /**
+     * <code>optional .roshan.buffer.CHARACTER_TYPE characterType = 13;</code>
+     */
     public boolean hasCharacterType() {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
+    /**
+     * <code>optional .roshan.buffer.CHARACTER_TYPE characterType = 13;</code>
+     */
     public roshan.buffer.Msg.CHARACTER_TYPE getCharacterType() {
       return characterType_;
     }
-    
+
     private void initFields() {
       id_ = 0;
       x_ = 0;
@@ -2388,8 +3684,9 @@ public final class Msg {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       if (!hasId()) {
         memoizedIsInitialized = 0;
         return false;
@@ -2397,7 +3694,7 @@ public final class Msg {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -2431,13 +3728,14 @@ public final class Msg {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeEnum(13, characterType_.getNumber());
       }
+      output.writeRawBytes(unknownFields);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2479,106 +3777,98 @@ public final class Msg {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(13, characterType_.getNumber());
       }
+      size += unknownFields.size();
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static roshan.buffer.Msg.CharacterAction parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.CharacterAction parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.CharacterAction parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.CharacterAction parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.CharacterAction parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.CharacterAction parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.CharacterAction parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static roshan.buffer.Msg.CharacterAction parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.CharacterAction parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.CharacterAction parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(roshan.buffer.Msg.CharacterAction prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
+    /**
+     * Protobuf type {@code roshan.buffer.CharacterAction}
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           roshan.buffer.Msg.CharacterAction, Builder>
-        implements roshan.buffer.Msg.CharacterActionOrBuilder {
+        implements
+        // @@protoc_insertion_point(builder_implements:roshan.buffer.CharacterAction)
+        roshan.buffer.Msg.CharacterActionOrBuilder {
       // Construct using roshan.buffer.Msg.CharacterAction.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
+
       private void maybeForceBuilderInitialization() {
       }
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         id_ = 0;
@@ -2603,15 +3893,15 @@ public final class Msg {
         bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public roshan.buffer.Msg.CharacterAction getDefaultInstanceForType() {
         return roshan.buffer.Msg.CharacterAction.getDefaultInstance();
       }
-      
+
       public roshan.buffer.Msg.CharacterAction build() {
         roshan.buffer.Msg.CharacterAction result = buildPartial();
         if (!result.isInitialized()) {
@@ -2619,17 +3909,7 @@ public final class Msg {
         }
         return result;
       }
-      
-      private roshan.buffer.Msg.CharacterAction buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        roshan.buffer.Msg.CharacterAction result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public roshan.buffer.Msg.CharacterAction buildPartial() {
         roshan.buffer.Msg.CharacterAction result = new roshan.buffer.Msg.CharacterAction(this);
         int from_bitField0_ = bitField0_;
@@ -2677,7 +3957,7 @@ public final class Msg {
         result.bitField0_ = to_bitField0_;
         return result;
       }
-      
+
       public Builder mergeFrom(roshan.buffer.Msg.CharacterAction other) {
         if (other == roshan.buffer.Msg.CharacterAction.getDefaultInstance()) return this;
         if (other.hasId()) {
@@ -2690,7 +3970,9 @@ public final class Msg {
           setY(other.getY());
         }
         if (other.hasSay()) {
-          setSay(other.getSay());
+          bitField0_ |= 0x00000008;
+          say_ = other.say_;
+          
         }
         if (other.hasWalk()) {
           setWalk(other.getWalk());
@@ -2710,9 +3992,11 @@ public final class Msg {
         if (other.hasCharacterType()) {
           setCharacterType(other.getCharacterType());
         }
+        setUnknownFields(
+            getUnknownFields().concat(other.unknownFields));
         return this;
       }
-      
+
       public final boolean isInitialized() {
         if (!hasId()) {
           
@@ -2720,167 +4004,167 @@ public final class Msg {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              
-              return this;
-            default: {
-              if (!parseUnknownField(input, extensionRegistry, tag)) {
-                
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              id_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              x_ = input.readSInt32();
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              y_ = input.readSInt32();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              say_ = input.readBytes();
-              break;
-            }
-            case 56: {
-              bitField0_ |= 0x00000010;
-              walk_ = input.readBool();
-              break;
-            }
-            case 64: {
-              bitField0_ |= 0x00000020;
-              direction_ = input.readUInt32();
-              break;
-            }
-            case 72: {
-              int rawValue = input.readEnum();
-              roshan.buffer.Msg.ACTION value = roshan.buffer.Msg.ACTION.valueOf(rawValue);
-              if (value != null) {
-                bitField0_ |= 0x00000040;
-                action_ = value;
-              }
-              break;
-            }
-            case 88: {
-              bitField0_ |= 0x00000080;
-              isYou_ = input.readBool();
-              break;
-            }
-            case 96: {
-              bitField0_ |= 0x00000100;
-              gone_ = input.readBool();
-              break;
-            }
-            case 104: {
-              int rawValue = input.readEnum();
-              roshan.buffer.Msg.CHARACTER_TYPE value = roshan.buffer.Msg.CHARACTER_TYPE.valueOf(rawValue);
-              if (value != null) {
-                bitField0_ |= 0x00000200;
-                characterType_ = value;
-              }
-              break;
-            }
+        roshan.buffer.Msg.CharacterAction parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (roshan.buffer.Msg.CharacterAction) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // required uint32 id = 1;
+
       private int id_ ;
+      /**
+       * <code>required uint32 id = 1;</code>
+       */
       public boolean hasId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>required uint32 id = 1;</code>
+       */
       public int getId() {
         return id_;
       }
+      /**
+       * <code>required uint32 id = 1;</code>
+       */
       public Builder setId(int value) {
         bitField0_ |= 0x00000001;
         id_ = value;
         
         return this;
       }
+      /**
+       * <code>required uint32 id = 1;</code>
+       */
       public Builder clearId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         id_ = 0;
         
         return this;
       }
-      
-      // optional sint32 x = 2;
+
       private int x_ ;
+      /**
+       * <code>optional sint32 x = 2;</code>
+       */
       public boolean hasX() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional sint32 x = 2;</code>
+       */
       public int getX() {
         return x_;
       }
+      /**
+       * <code>optional sint32 x = 2;</code>
+       */
       public Builder setX(int value) {
         bitField0_ |= 0x00000002;
         x_ = value;
         
         return this;
       }
+      /**
+       * <code>optional sint32 x = 2;</code>
+       */
       public Builder clearX() {
         bitField0_ = (bitField0_ & ~0x00000002);
         x_ = 0;
         
         return this;
       }
-      
-      // optional sint32 y = 3;
+
       private int y_ ;
+      /**
+       * <code>optional sint32 y = 3;</code>
+       */
       public boolean hasY() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional sint32 y = 3;</code>
+       */
       public int getY() {
         return y_;
       }
+      /**
+       * <code>optional sint32 y = 3;</code>
+       */
       public Builder setY(int value) {
         bitField0_ |= 0x00000004;
         y_ = value;
         
         return this;
       }
+      /**
+       * <code>optional sint32 y = 3;</code>
+       */
       public Builder clearY() {
         bitField0_ = (bitField0_ & ~0x00000004);
         y_ = 0;
         
         return this;
       }
-      
-      // optional string say = 4;
+
       private java.lang.Object say_ = "";
+      /**
+       * <code>optional string say = 4;</code>
+       */
       public boolean hasSay() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getSay() {
+      /**
+       * <code>optional string say = 4;</code>
+       */
+      public java.lang.String getSay() {
         java.lang.Object ref = say_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          say_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            say_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSay(String value) {
+      /**
+       * <code>optional string say = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSayBytes() {
+        java.lang.Object ref = say_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          say_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string say = 4;</code>
+       */
+      public Builder setSay(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2889,68 +4173,109 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>optional string say = 4;</code>
+       */
       public Builder clearSay() {
         bitField0_ = (bitField0_ & ~0x00000008);
         say_ = getDefaultInstance().getSay();
         
         return this;
       }
-      void setSay(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>optional string say = 4;</code>
+       */
+      public Builder setSayBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         say_ = value;
         
+        return this;
       }
-      
-      // optional bool walk = 7;
+
       private boolean walk_ ;
+      /**
+       * <code>optional bool walk = 7;</code>
+       */
       public boolean hasWalk() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>optional bool walk = 7;</code>
+       */
       public boolean getWalk() {
         return walk_;
       }
+      /**
+       * <code>optional bool walk = 7;</code>
+       */
       public Builder setWalk(boolean value) {
         bitField0_ |= 0x00000010;
         walk_ = value;
         
         return this;
       }
+      /**
+       * <code>optional bool walk = 7;</code>
+       */
       public Builder clearWalk() {
         bitField0_ = (bitField0_ & ~0x00000010);
         walk_ = false;
         
         return this;
       }
-      
-      // optional uint32 direction = 8;
+
       private int direction_ ;
+      /**
+       * <code>optional uint32 direction = 8;</code>
+       */
       public boolean hasDirection() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
+      /**
+       * <code>optional uint32 direction = 8;</code>
+       */
       public int getDirection() {
         return direction_;
       }
+      /**
+       * <code>optional uint32 direction = 8;</code>
+       */
       public Builder setDirection(int value) {
         bitField0_ |= 0x00000020;
         direction_ = value;
         
         return this;
       }
+      /**
+       * <code>optional uint32 direction = 8;</code>
+       */
       public Builder clearDirection() {
         bitField0_ = (bitField0_ & ~0x00000020);
         direction_ = 0;
         
         return this;
       }
-      
-      // optional .roshan.buffer.ACTION action = 9;
+
       private roshan.buffer.Msg.ACTION action_ = roshan.buffer.Msg.ACTION.SWORD;
+      /**
+       * <code>optional .roshan.buffer.ACTION action = 9;</code>
+       */
       public boolean hasAction() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
+      /**
+       * <code>optional .roshan.buffer.ACTION action = 9;</code>
+       */
       public roshan.buffer.Msg.ACTION getAction() {
         return action_;
       }
+      /**
+       * <code>optional .roshan.buffer.ACTION action = 9;</code>
+       */
       public Builder setAction(roshan.buffer.Msg.ACTION value) {
         if (value == null) {
           throw new NullPointerException();
@@ -2960,63 +4285,96 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>optional .roshan.buffer.ACTION action = 9;</code>
+       */
       public Builder clearAction() {
         bitField0_ = (bitField0_ & ~0x00000040);
         action_ = roshan.buffer.Msg.ACTION.SWORD;
         
         return this;
       }
-      
-      // optional bool isYou = 11;
+
       private boolean isYou_ ;
+      /**
+       * <code>optional bool isYou = 11;</code>
+       */
       public boolean hasIsYou() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
+      /**
+       * <code>optional bool isYou = 11;</code>
+       */
       public boolean getIsYou() {
         return isYou_;
       }
+      /**
+       * <code>optional bool isYou = 11;</code>
+       */
       public Builder setIsYou(boolean value) {
         bitField0_ |= 0x00000080;
         isYou_ = value;
         
         return this;
       }
+      /**
+       * <code>optional bool isYou = 11;</code>
+       */
       public Builder clearIsYou() {
         bitField0_ = (bitField0_ & ~0x00000080);
         isYou_ = false;
         
         return this;
       }
-      
-      // optional bool gone = 12;
+
       private boolean gone_ ;
+      /**
+       * <code>optional bool gone = 12;</code>
+       */
       public boolean hasGone() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
+      /**
+       * <code>optional bool gone = 12;</code>
+       */
       public boolean getGone() {
         return gone_;
       }
+      /**
+       * <code>optional bool gone = 12;</code>
+       */
       public Builder setGone(boolean value) {
         bitField0_ |= 0x00000100;
         gone_ = value;
         
         return this;
       }
+      /**
+       * <code>optional bool gone = 12;</code>
+       */
       public Builder clearGone() {
         bitField0_ = (bitField0_ & ~0x00000100);
         gone_ = false;
         
         return this;
       }
-      
-      // optional .roshan.buffer.CHARACTER_TYPE characterType = 13;
+
       private roshan.buffer.Msg.CHARACTER_TYPE characterType_ = roshan.buffer.Msg.CHARACTER_TYPE.HERO;
+      /**
+       * <code>optional .roshan.buffer.CHARACTER_TYPE characterType = 13;</code>
+       */
       public boolean hasCharacterType() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
+      /**
+       * <code>optional .roshan.buffer.CHARACTER_TYPE characterType = 13;</code>
+       */
       public roshan.buffer.Msg.CHARACTER_TYPE getCharacterType() {
         return characterType_;
       }
+      /**
+       * <code>optional .roshan.buffer.CHARACTER_TYPE characterType = 13;</code>
+       */
       public Builder setCharacterType(roshan.buffer.Msg.CHARACTER_TYPE value) {
         if (value == null) {
           throw new NullPointerException();
@@ -3026,126 +4384,294 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>optional .roshan.buffer.CHARACTER_TYPE characterType = 13;</code>
+       */
       public Builder clearCharacterType() {
         bitField0_ = (bitField0_ & ~0x00000200);
         characterType_ = roshan.buffer.Msg.CHARACTER_TYPE.HERO;
         
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:roshan.buffer.CharacterAction)
     }
-    
+
     static {
       defaultInstance = new CharacterAction(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:roshan.buffer.CharacterAction)
   }
-  
-  public interface WorldChangeOrBuilder
-      extends com.google.protobuf.MessageLiteOrBuilder {
-    
-    // repeated .roshan.buffer.CharacterAction characterActions = 1;
+
+  public interface WorldChangeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:roshan.buffer.WorldChange)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+     */
     java.util.List<roshan.buffer.Msg.CharacterAction> 
         getCharacterActionsList();
+    /**
+     * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+     */
     roshan.buffer.Msg.CharacterAction getCharacterActions(int index);
+    /**
+     * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+     */
     int getCharacterActionsCount();
-    
-    // repeated .roshan.buffer.MapData mapData = 2;
+
+    /**
+     * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+     */
     java.util.List<roshan.buffer.Msg.MapData> 
         getMapDataList();
+    /**
+     * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+     */
     roshan.buffer.Msg.MapData getMapData(int index);
+    /**
+     * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+     */
     int getMapDataCount();
-    
-    // repeated .roshan.buffer.MapChange mapChange = 3;
+
+    /**
+     * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+     */
     java.util.List<roshan.buffer.Msg.MapChange> 
         getMapChangeList();
+    /**
+     * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+     */
     roshan.buffer.Msg.MapChange getMapChange(int index);
+    /**
+     * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+     */
     int getMapChangeCount();
   }
+  /**
+   * Protobuf type {@code roshan.buffer.WorldChange}
+   */
   public static final class WorldChange extends
-      com.google.protobuf.GeneratedMessageLite
-      implements WorldChangeOrBuilder {
+      com.google.protobuf.GeneratedMessageLite implements
+      // @@protoc_insertion_point(message_implements:roshan.buffer.WorldChange)
+      WorldChangeOrBuilder {
     // Use WorldChange.newBuilder() to construct.
-    private WorldChange(Builder builder) {
+    private WorldChange(com.google.protobuf.GeneratedMessageLite.Builder builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private WorldChange(boolean noInit) {}
-    
+    private WorldChange(boolean noInit) { this.unknownFields = com.google.protobuf.ByteString.EMPTY;}
+
     private static final WorldChange defaultInstance;
     public static WorldChange getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public WorldChange getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
-    // repeated .roshan.buffer.CharacterAction characterActions = 1;
+
+    private final com.google.protobuf.ByteString unknownFields;
+    private WorldChange(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.ByteString.Output unknownFieldsOutput =
+          com.google.protobuf.ByteString.newOutput();
+      com.google.protobuf.CodedOutputStream unknownFieldsCodedOutput =
+          com.google.protobuf.CodedOutputStream.newInstance(
+              unknownFieldsOutput);
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFieldsCodedOutput,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                characterActions_ = new java.util.ArrayList<roshan.buffer.Msg.CharacterAction>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              characterActions_.add(input.readMessage(roshan.buffer.Msg.CharacterAction.PARSER, extensionRegistry));
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                mapData_ = new java.util.ArrayList<roshan.buffer.Msg.MapData>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              mapData_.add(input.readMessage(roshan.buffer.Msg.MapData.PARSER, extensionRegistry));
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                mapChange_ = new java.util.ArrayList<roshan.buffer.Msg.MapChange>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              mapChange_.add(input.readMessage(roshan.buffer.Msg.MapChange.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          characterActions_ = java.util.Collections.unmodifiableList(characterActions_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          mapData_ = java.util.Collections.unmodifiableList(mapData_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          mapChange_ = java.util.Collections.unmodifiableList(mapChange_);
+        }
+        try {
+          unknownFieldsCodedOutput.flush();
+        } catch (java.io.IOException e) {
+        // Should not happen
+        } finally {
+          unknownFields = unknownFieldsOutput.toByteString();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static com.google.protobuf.Parser<WorldChange> PARSER =
+        new com.google.protobuf.AbstractParser<WorldChange>() {
+      public WorldChange parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WorldChange(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WorldChange> getParserForType() {
+      return PARSER;
+    }
+
     public static final int CHARACTERACTIONS_FIELD_NUMBER = 1;
     private java.util.List<roshan.buffer.Msg.CharacterAction> characterActions_;
+    /**
+     * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+     */
     public java.util.List<roshan.buffer.Msg.CharacterAction> getCharacterActionsList() {
       return characterActions_;
     }
+    /**
+     * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+     */
     public java.util.List<? extends roshan.buffer.Msg.CharacterActionOrBuilder> 
         getCharacterActionsOrBuilderList() {
       return characterActions_;
     }
+    /**
+     * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+     */
     public int getCharacterActionsCount() {
       return characterActions_.size();
     }
+    /**
+     * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+     */
     public roshan.buffer.Msg.CharacterAction getCharacterActions(int index) {
       return characterActions_.get(index);
     }
+    /**
+     * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+     */
     public roshan.buffer.Msg.CharacterActionOrBuilder getCharacterActionsOrBuilder(
         int index) {
       return characterActions_.get(index);
     }
-    
-    // repeated .roshan.buffer.MapData mapData = 2;
+
     public static final int MAPDATA_FIELD_NUMBER = 2;
     private java.util.List<roshan.buffer.Msg.MapData> mapData_;
+    /**
+     * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+     */
     public java.util.List<roshan.buffer.Msg.MapData> getMapDataList() {
       return mapData_;
     }
+    /**
+     * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+     */
     public java.util.List<? extends roshan.buffer.Msg.MapDataOrBuilder> 
         getMapDataOrBuilderList() {
       return mapData_;
     }
+    /**
+     * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+     */
     public int getMapDataCount() {
       return mapData_.size();
     }
+    /**
+     * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+     */
     public roshan.buffer.Msg.MapData getMapData(int index) {
       return mapData_.get(index);
     }
+    /**
+     * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+     */
     public roshan.buffer.Msg.MapDataOrBuilder getMapDataOrBuilder(
         int index) {
       return mapData_.get(index);
     }
-    
-    // repeated .roshan.buffer.MapChange mapChange = 3;
+
     public static final int MAPCHANGE_FIELD_NUMBER = 3;
     private java.util.List<roshan.buffer.Msg.MapChange> mapChange_;
+    /**
+     * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+     */
     public java.util.List<roshan.buffer.Msg.MapChange> getMapChangeList() {
       return mapChange_;
     }
+    /**
+     * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+     */
     public java.util.List<? extends roshan.buffer.Msg.MapChangeOrBuilder> 
         getMapChangeOrBuilderList() {
       return mapChange_;
     }
+    /**
+     * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+     */
     public int getMapChangeCount() {
       return mapChange_.size();
     }
+    /**
+     * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+     */
     public roshan.buffer.Msg.MapChange getMapChange(int index) {
       return mapChange_.get(index);
     }
+    /**
+     * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+     */
     public roshan.buffer.Msg.MapChangeOrBuilder getMapChangeOrBuilder(
         int index) {
       return mapChange_.get(index);
     }
-    
+
     private void initFields() {
       characterActions_ = java.util.Collections.emptyList();
       mapData_ = java.util.Collections.emptyList();
@@ -3154,8 +4680,9 @@ public final class Msg {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       for (int i = 0; i < getCharacterActionsCount(); i++) {
         if (!getCharacterActions(i).isInitialized()) {
           memoizedIsInitialized = 0;
@@ -3171,7 +4698,7 @@ public final class Msg {
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -3184,13 +4711,14 @@ public final class Msg {
       for (int i = 0; i < mapChange_.size(); i++) {
         output.writeMessage(3, mapChange_.get(i));
       }
+      output.writeRawBytes(unknownFields);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       for (int i = 0; i < characterActions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -3204,106 +4732,98 @@ public final class Msg {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, mapChange_.get(i));
       }
+      size += unknownFields.size();
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static roshan.buffer.Msg.WorldChange parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.WorldChange parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.WorldChange parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.WorldChange parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.WorldChange parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.WorldChange parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.WorldChange parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static roshan.buffer.Msg.WorldChange parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.WorldChange parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.WorldChange parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(roshan.buffer.Msg.WorldChange prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
+    /**
+     * Protobuf type {@code roshan.buffer.WorldChange}
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           roshan.buffer.Msg.WorldChange, Builder>
-        implements roshan.buffer.Msg.WorldChangeOrBuilder {
+        implements
+        // @@protoc_insertion_point(builder_implements:roshan.buffer.WorldChange)
+        roshan.buffer.Msg.WorldChangeOrBuilder {
       // Construct using roshan.buffer.Msg.WorldChange.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
+
       private void maybeForceBuilderInitialization() {
       }
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         characterActions_ = java.util.Collections.emptyList();
@@ -3314,15 +4834,15 @@ public final class Msg {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public roshan.buffer.Msg.WorldChange getDefaultInstanceForType() {
         return roshan.buffer.Msg.WorldChange.getDefaultInstance();
       }
-      
+
       public roshan.buffer.Msg.WorldChange build() {
         roshan.buffer.Msg.WorldChange result = buildPartial();
         if (!result.isInitialized()) {
@@ -3330,17 +4850,7 @@ public final class Msg {
         }
         return result;
       }
-      
-      private roshan.buffer.Msg.WorldChange buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        roshan.buffer.Msg.WorldChange result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public roshan.buffer.Msg.WorldChange buildPartial() {
         roshan.buffer.Msg.WorldChange result = new roshan.buffer.Msg.WorldChange(this);
         int from_bitField0_ = bitField0_;
@@ -3361,7 +4871,7 @@ public final class Msg {
         result.mapChange_ = mapChange_;
         return result;
       }
-      
+
       public Builder mergeFrom(roshan.buffer.Msg.WorldChange other) {
         if (other == roshan.buffer.Msg.WorldChange.getDefaultInstance()) return this;
         if (!other.characterActions_.isEmpty()) {
@@ -3394,9 +4904,11 @@ public final class Msg {
           }
           
         }
+        setUnknownFields(
+            getUnknownFields().concat(other.unknownFields));
         return this;
       }
-      
+
       public final boolean isInitialized() {
         for (int i = 0; i < getCharacterActionsCount(); i++) {
           if (!getCharacterActions(i).isInitialized()) {
@@ -3412,49 +4924,26 @@ public final class Msg {
         }
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              
-              return this;
-            default: {
-              if (!parseUnknownField(input, extensionRegistry, tag)) {
-                
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              roshan.buffer.Msg.CharacterAction.Builder subBuilder = roshan.buffer.Msg.CharacterAction.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addCharacterActions(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              roshan.buffer.Msg.MapData.Builder subBuilder = roshan.buffer.Msg.MapData.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addMapData(subBuilder.buildPartial());
-              break;
-            }
-            case 26: {
-              roshan.buffer.Msg.MapChange.Builder subBuilder = roshan.buffer.Msg.MapChange.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addMapChange(subBuilder.buildPartial());
-              break;
-            }
+        roshan.buffer.Msg.WorldChange parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (roshan.buffer.Msg.WorldChange) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // repeated .roshan.buffer.CharacterAction characterActions = 1;
+
       private java.util.List<roshan.buffer.Msg.CharacterAction> characterActions_ =
         java.util.Collections.emptyList();
       private void ensureCharacterActionsIsMutable() {
@@ -3463,16 +4952,28 @@ public final class Msg {
           bitField0_ |= 0x00000001;
          }
       }
-      
+
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public java.util.List<roshan.buffer.Msg.CharacterAction> getCharacterActionsList() {
         return java.util.Collections.unmodifiableList(characterActions_);
       }
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public int getCharacterActionsCount() {
         return characterActions_.size();
       }
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public roshan.buffer.Msg.CharacterAction getCharacterActions(int index) {
         return characterActions_.get(index);
       }
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public Builder setCharacterActions(
           int index, roshan.buffer.Msg.CharacterAction value) {
         if (value == null) {
@@ -3480,25 +4981,34 @@ public final class Msg {
         }
         ensureCharacterActionsIsMutable();
         characterActions_.set(index, value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public Builder setCharacterActions(
           int index, roshan.buffer.Msg.CharacterAction.Builder builderForValue) {
         ensureCharacterActionsIsMutable();
         characterActions_.set(index, builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public Builder addCharacterActions(roshan.buffer.Msg.CharacterAction value) {
         if (value == null) {
           throw new NullPointerException();
         }
         ensureCharacterActionsIsMutable();
         characterActions_.add(value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public Builder addCharacterActions(
           int index, roshan.buffer.Msg.CharacterAction value) {
         if (value == null) {
@@ -3506,44 +5016,59 @@ public final class Msg {
         }
         ensureCharacterActionsIsMutable();
         characterActions_.add(index, value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public Builder addCharacterActions(
           roshan.buffer.Msg.CharacterAction.Builder builderForValue) {
         ensureCharacterActionsIsMutable();
         characterActions_.add(builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public Builder addCharacterActions(
           int index, roshan.buffer.Msg.CharacterAction.Builder builderForValue) {
         ensureCharacterActionsIsMutable();
         characterActions_.add(index, builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public Builder addAllCharacterActions(
           java.lang.Iterable<? extends roshan.buffer.Msg.CharacterAction> values) {
         ensureCharacterActionsIsMutable();
-        super.addAll(values, characterActions_);
-        
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, characterActions_);
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public Builder clearCharacterActions() {
         characterActions_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.CharacterAction characterActions = 1;</code>
+       */
       public Builder removeCharacterActions(int index) {
         ensureCharacterActionsIsMutable();
         characterActions_.remove(index);
-        
+
         return this;
       }
-      
-      // repeated .roshan.buffer.MapData mapData = 2;
+
       private java.util.List<roshan.buffer.Msg.MapData> mapData_ =
         java.util.Collections.emptyList();
       private void ensureMapDataIsMutable() {
@@ -3552,16 +5077,28 @@ public final class Msg {
           bitField0_ |= 0x00000002;
          }
       }
-      
+
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public java.util.List<roshan.buffer.Msg.MapData> getMapDataList() {
         return java.util.Collections.unmodifiableList(mapData_);
       }
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public int getMapDataCount() {
         return mapData_.size();
       }
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public roshan.buffer.Msg.MapData getMapData(int index) {
         return mapData_.get(index);
       }
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public Builder setMapData(
           int index, roshan.buffer.Msg.MapData value) {
         if (value == null) {
@@ -3569,25 +5106,34 @@ public final class Msg {
         }
         ensureMapDataIsMutable();
         mapData_.set(index, value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public Builder setMapData(
           int index, roshan.buffer.Msg.MapData.Builder builderForValue) {
         ensureMapDataIsMutable();
         mapData_.set(index, builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public Builder addMapData(roshan.buffer.Msg.MapData value) {
         if (value == null) {
           throw new NullPointerException();
         }
         ensureMapDataIsMutable();
         mapData_.add(value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public Builder addMapData(
           int index, roshan.buffer.Msg.MapData value) {
         if (value == null) {
@@ -3595,44 +5141,59 @@ public final class Msg {
         }
         ensureMapDataIsMutable();
         mapData_.add(index, value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public Builder addMapData(
           roshan.buffer.Msg.MapData.Builder builderForValue) {
         ensureMapDataIsMutable();
         mapData_.add(builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public Builder addMapData(
           int index, roshan.buffer.Msg.MapData.Builder builderForValue) {
         ensureMapDataIsMutable();
         mapData_.add(index, builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public Builder addAllMapData(
           java.lang.Iterable<? extends roshan.buffer.Msg.MapData> values) {
         ensureMapDataIsMutable();
-        super.addAll(values, mapData_);
-        
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, mapData_);
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public Builder clearMapData() {
         mapData_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapData mapData = 2;</code>
+       */
       public Builder removeMapData(int index) {
         ensureMapDataIsMutable();
         mapData_.remove(index);
-        
+
         return this;
       }
-      
-      // repeated .roshan.buffer.MapChange mapChange = 3;
+
       private java.util.List<roshan.buffer.Msg.MapChange> mapChange_ =
         java.util.Collections.emptyList();
       private void ensureMapChangeIsMutable() {
@@ -3641,16 +5202,28 @@ public final class Msg {
           bitField0_ |= 0x00000004;
          }
       }
-      
+
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public java.util.List<roshan.buffer.Msg.MapChange> getMapChangeList() {
         return java.util.Collections.unmodifiableList(mapChange_);
       }
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public int getMapChangeCount() {
         return mapChange_.size();
       }
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public roshan.buffer.Msg.MapChange getMapChange(int index) {
         return mapChange_.get(index);
       }
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public Builder setMapChange(
           int index, roshan.buffer.Msg.MapChange value) {
         if (value == null) {
@@ -3658,25 +5231,34 @@ public final class Msg {
         }
         ensureMapChangeIsMutable();
         mapChange_.set(index, value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public Builder setMapChange(
           int index, roshan.buffer.Msg.MapChange.Builder builderForValue) {
         ensureMapChangeIsMutable();
         mapChange_.set(index, builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public Builder addMapChange(roshan.buffer.Msg.MapChange value) {
         if (value == null) {
           throw new NullPointerException();
         }
         ensureMapChangeIsMutable();
         mapChange_.add(value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public Builder addMapChange(
           int index, roshan.buffer.Msg.MapChange value) {
         if (value == null) {
@@ -3684,140 +5266,285 @@ public final class Msg {
         }
         ensureMapChangeIsMutable();
         mapChange_.add(index, value);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public Builder addMapChange(
           roshan.buffer.Msg.MapChange.Builder builderForValue) {
         ensureMapChangeIsMutable();
         mapChange_.add(builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public Builder addMapChange(
           int index, roshan.buffer.Msg.MapChange.Builder builderForValue) {
         ensureMapChangeIsMutable();
         mapChange_.add(index, builderForValue.build());
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public Builder addAllMapChange(
           java.lang.Iterable<? extends roshan.buffer.Msg.MapChange> values) {
         ensureMapChangeIsMutable();
-        super.addAll(values, mapChange_);
-        
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, mapChange_);
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public Builder clearMapChange() {
         mapChange_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
-        
+
         return this;
       }
+      /**
+       * <code>repeated .roshan.buffer.MapChange mapChange = 3;</code>
+       */
       public Builder removeMapChange(int index) {
         ensureMapChangeIsMutable();
         mapChange_.remove(index);
-        
+
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:roshan.buffer.WorldChange)
     }
-    
+
     static {
       defaultInstance = new WorldChange(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:roshan.buffer.WorldChange)
   }
-  
-  public interface ClientChangeOrBuilder
-      extends com.google.protobuf.MessageLiteOrBuilder {
-    
-    // optional .roshan.buffer.ACTION action = 1;
+
+  public interface ClientChangeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:roshan.buffer.ClientChange)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>optional .roshan.buffer.ACTION action = 1;</code>
+     */
     boolean hasAction();
+    /**
+     * <code>optional .roshan.buffer.ACTION action = 1;</code>
+     */
     roshan.buffer.Msg.ACTION getAction();
-    
-    // optional uint32 direction = 2;
+
+    /**
+     * <code>optional uint32 direction = 2;</code>
+     */
     boolean hasDirection();
+    /**
+     * <code>optional uint32 direction = 2;</code>
+     */
     int getDirection();
-    
-    // optional string say = 3;
+
+    /**
+     * <code>optional string say = 3;</code>
+     */
     boolean hasSay();
-    String getSay();
+    /**
+     * <code>optional string say = 3;</code>
+     */
+    java.lang.String getSay();
+    /**
+     * <code>optional string say = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getSayBytes();
   }
+  /**
+   * Protobuf type {@code roshan.buffer.ClientChange}
+   */
   public static final class ClientChange extends
-      com.google.protobuf.GeneratedMessageLite
-      implements ClientChangeOrBuilder {
+      com.google.protobuf.GeneratedMessageLite implements
+      // @@protoc_insertion_point(message_implements:roshan.buffer.ClientChange)
+      ClientChangeOrBuilder {
     // Use ClientChange.newBuilder() to construct.
-    private ClientChange(Builder builder) {
+    private ClientChange(com.google.protobuf.GeneratedMessageLite.Builder builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private ClientChange(boolean noInit) {}
-    
+    private ClientChange(boolean noInit) { this.unknownFields = com.google.protobuf.ByteString.EMPTY;}
+
     private static final ClientChange defaultInstance;
     public static ClientChange getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public ClientChange getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.ByteString unknownFields;
+    private ClientChange(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.ByteString.Output unknownFieldsOutput =
+          com.google.protobuf.ByteString.newOutput();
+      com.google.protobuf.CodedOutputStream unknownFieldsCodedOutput =
+          com.google.protobuf.CodedOutputStream.newInstance(
+              unknownFieldsOutput);
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFieldsCodedOutput,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              roshan.buffer.Msg.ACTION value = roshan.buffer.Msg.ACTION.valueOf(rawValue);
+              if (value == null) {
+                unknownFieldsCodedOutput.writeRawVarint32(tag);
+                unknownFieldsCodedOutput.writeRawVarint32(rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                action_ = value;
+              }
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              direction_ = input.readUInt32();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              say_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        try {
+          unknownFieldsCodedOutput.flush();
+        } catch (java.io.IOException e) {
+        // Should not happen
+        } finally {
+          unknownFields = unknownFieldsOutput.toByteString();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static com.google.protobuf.Parser<ClientChange> PARSER =
+        new com.google.protobuf.AbstractParser<ClientChange>() {
+      public ClientChange parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ClientChange(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClientChange> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional .roshan.buffer.ACTION action = 1;
     public static final int ACTION_FIELD_NUMBER = 1;
     private roshan.buffer.Msg.ACTION action_;
+    /**
+     * <code>optional .roshan.buffer.ACTION action = 1;</code>
+     */
     public boolean hasAction() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .roshan.buffer.ACTION action = 1;</code>
+     */
     public roshan.buffer.Msg.ACTION getAction() {
       return action_;
     }
-    
-    // optional uint32 direction = 2;
+
     public static final int DIRECTION_FIELD_NUMBER = 2;
     private int direction_;
+    /**
+     * <code>optional uint32 direction = 2;</code>
+     */
     public boolean hasDirection() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
+    /**
+     * <code>optional uint32 direction = 2;</code>
+     */
     public int getDirection() {
       return direction_;
     }
-    
-    // optional string say = 3;
+
     public static final int SAY_FIELD_NUMBER = 3;
     private java.lang.Object say_;
+    /**
+     * <code>optional string say = 3;</code>
+     */
     public boolean hasSay() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getSay() {
+    /**
+     * <code>optional string say = 3;</code>
+     */
+    public java.lang.String getSay() {
       java.lang.Object ref = say_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           say_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSayBytes() {
+    /**
+     * <code>optional string say = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSayBytes() {
       java.lang.Object ref = say_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         say_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     private void initFields() {
       action_ = roshan.buffer.Msg.ACTION.SWORD;
       direction_ = 0;
@@ -3826,12 +5553,13 @@ public final class Msg {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -3844,13 +5572,14 @@ public final class Msg {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, getSayBytes());
       }
+      output.writeRawBytes(unknownFields);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -3864,106 +5593,98 @@ public final class Msg {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, getSayBytes());
       }
+      size += unknownFields.size();
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static roshan.buffer.Msg.ClientChange parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.ClientChange parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.ClientChange parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static roshan.buffer.Msg.ClientChange parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static roshan.buffer.Msg.ClientChange parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.ClientChange parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.ClientChange parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static roshan.buffer.Msg.ClientChange parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static roshan.buffer.Msg.ClientChange parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static roshan.buffer.Msg.ClientChange parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(roshan.buffer.Msg.ClientChange prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
+    /**
+     * Protobuf type {@code roshan.buffer.ClientChange}
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageLite.Builder<
           roshan.buffer.Msg.ClientChange, Builder>
-        implements roshan.buffer.Msg.ClientChangeOrBuilder {
+        implements
+        // @@protoc_insertion_point(builder_implements:roshan.buffer.ClientChange)
+        roshan.buffer.Msg.ClientChangeOrBuilder {
       // Construct using roshan.buffer.Msg.ClientChange.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
+
       private void maybeForceBuilderInitialization() {
       }
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         action_ = roshan.buffer.Msg.ACTION.SWORD;
@@ -3974,15 +5695,15 @@ public final class Msg {
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public roshan.buffer.Msg.ClientChange getDefaultInstanceForType() {
         return roshan.buffer.Msg.ClientChange.getDefaultInstance();
       }
-      
+
       public roshan.buffer.Msg.ClientChange build() {
         roshan.buffer.Msg.ClientChange result = buildPartial();
         if (!result.isInitialized()) {
@@ -3990,17 +5711,7 @@ public final class Msg {
         }
         return result;
       }
-      
-      private roshan.buffer.Msg.ClientChange buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        roshan.buffer.Msg.ClientChange result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public roshan.buffer.Msg.ClientChange buildPartial() {
         roshan.buffer.Msg.ClientChange result = new roshan.buffer.Msg.ClientChange(this);
         int from_bitField0_ = bitField0_;
@@ -4020,7 +5731,7 @@ public final class Msg {
         result.bitField0_ = to_bitField0_;
         return result;
       }
-      
+
       public Builder mergeFrom(roshan.buffer.Msg.ClientChange other) {
         if (other == roshan.buffer.Msg.ClientChange.getDefaultInstance()) return this;
         if (other.hasAction()) {
@@ -4030,65 +5741,54 @@ public final class Msg {
           setDirection(other.getDirection());
         }
         if (other.hasSay()) {
-          setSay(other.getSay());
+          bitField0_ |= 0x00000004;
+          say_ = other.say_;
+          
         }
+        setUnknownFields(
+            getUnknownFields().concat(other.unknownFields));
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              
-              return this;
-            default: {
-              if (!parseUnknownField(input, extensionRegistry, tag)) {
-                
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              int rawValue = input.readEnum();
-              roshan.buffer.Msg.ACTION value = roshan.buffer.Msg.ACTION.valueOf(rawValue);
-              if (value != null) {
-                bitField0_ |= 0x00000001;
-                action_ = value;
-              }
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              direction_ = input.readUInt32();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              say_ = input.readBytes();
-              break;
-            }
+        roshan.buffer.Msg.ClientChange parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (roshan.buffer.Msg.ClientChange) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
-      // optional .roshan.buffer.ACTION action = 1;
+
       private roshan.buffer.Msg.ACTION action_ = roshan.buffer.Msg.ACTION.SWORD;
+      /**
+       * <code>optional .roshan.buffer.ACTION action = 1;</code>
+       */
       public boolean hasAction() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .roshan.buffer.ACTION action = 1;</code>
+       */
       public roshan.buffer.Msg.ACTION getAction() {
         return action_;
       }
+      /**
+       * <code>optional .roshan.buffer.ACTION action = 1;</code>
+       */
       public Builder setAction(roshan.buffer.Msg.ACTION value) {
         if (value == null) {
           throw new NullPointerException();
@@ -4098,50 +5798,93 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>optional .roshan.buffer.ACTION action = 1;</code>
+       */
       public Builder clearAction() {
         bitField0_ = (bitField0_ & ~0x00000001);
         action_ = roshan.buffer.Msg.ACTION.SWORD;
         
         return this;
       }
-      
-      // optional uint32 direction = 2;
+
       private int direction_ ;
+      /**
+       * <code>optional uint32 direction = 2;</code>
+       */
       public boolean hasDirection() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional uint32 direction = 2;</code>
+       */
       public int getDirection() {
         return direction_;
       }
+      /**
+       * <code>optional uint32 direction = 2;</code>
+       */
       public Builder setDirection(int value) {
         bitField0_ |= 0x00000002;
         direction_ = value;
         
         return this;
       }
+      /**
+       * <code>optional uint32 direction = 2;</code>
+       */
       public Builder clearDirection() {
         bitField0_ = (bitField0_ & ~0x00000002);
         direction_ = 0;
         
         return this;
       }
-      
-      // optional string say = 3;
+
       private java.lang.Object say_ = "";
+      /**
+       * <code>optional string say = 3;</code>
+       */
       public boolean hasSay() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getSay() {
+      /**
+       * <code>optional string say = 3;</code>
+       */
+      public java.lang.String getSay() {
         java.lang.Object ref = say_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          say_ = s;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            say_ = s;
+          }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSay(String value) {
+      /**
+       * <code>optional string say = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSayBytes() {
+        java.lang.Object ref = say_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          say_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string say = 3;</code>
+       */
+      public Builder setSay(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4150,32 +5893,43 @@ public final class Msg {
         
         return this;
       }
+      /**
+       * <code>optional string say = 3;</code>
+       */
       public Builder clearSay() {
         bitField0_ = (bitField0_ & ~0x00000004);
         say_ = getDefaultInstance().getSay();
         
         return this;
       }
-      void setSay(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string say = 3;</code>
+       */
+      public Builder setSayBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         say_ = value;
         
+        return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:roshan.buffer.ClientChange)
     }
-    
+
     static {
       defaultInstance = new ClientChange(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:roshan.buffer.ClientChange)
   }
-  
-  
+
+
   static {
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }

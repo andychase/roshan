@@ -8,7 +8,6 @@ import roshan.buffer.Msg.ACTION
 import roshan.item.ItemFactory
 import roshan.buffer.Msg.ITEM_ATTR._
 import roshan.protocols.CharacterProtocol.Tick
-import roshan.protocols.LoaderProtocol.SaveCharacter
 import roshan.protocols.MapProtocol.RemoveCharacter
 import roshan.protocols.CharacterProtocol.Hit
 import roshan.protocols.MapProtocol.Walk
@@ -78,7 +77,6 @@ class Character(client:ActorRef = null, Server:Mappable = Server, character:dbCh
       map = Server.mapBox(x, y)
 
     case SaveNow =>
-      map ! SaveCharacter(my.copy())
       map ! RemoveCharacter()
       self ! PoisonPill
 

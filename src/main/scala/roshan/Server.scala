@@ -1,10 +1,10 @@
 package roshan
 
-import akka.actor.{ActorRef, Props, ActorSystem}
-import roshan.db.{dbCharacter, Loader}
+import akka.actor.{ActorRef, ActorSystem, Props}
 import roshan.Useful._
-import roshan.protocols.LoaderProtocol.{SaveCharacter, SendMap, LoadCharacter}
+import roshan.db.Loader
 import roshan.map.MapBox
+import roshan.protocols.LoaderProtocol.SendMap
 
 trait Mappable {
   def mapBox(x:Int, y:Int):ActorRef
@@ -13,7 +13,6 @@ trait Mappable {
 
 trait Loaderable {
   def sendMap(x:Int, y:Int, recipient:ActorRef)
-  def saveChar(char:dbCharacter, sender:ActorRef)
 }
 
 /** This is the top level of the server.
@@ -25,9 +24,8 @@ object Server extends App with Mappable with Loaderable {
   lazy val system = TestActorSystem getOrElse ActorSystem("LittleIslandSystem")
 
   // Setup primary servers
-  val network = if (isTesting) null else system.actorOf(Props[Network](new Network(8081)), "network")
+  val network = if (isTesting) null else system.actorOf(Props[Network])
   lazy val loader = system.actorOf(Props[Loader], "loader")
-  lazy val login = system.actorOf(Props[Login], "login")
 
   // Bring up the map servers
   lazy val (mapBoxesX, mapBoxesY) = (2, 2)
@@ -44,11 +42,6 @@ object Server extends App with Mappable with Loaderable {
 
   // Functions -----------------
   def sendMap(x:Int, y:Int, recipient:ActorRef)   { loader tell (SendMap(x, y, recipient), recipient) }
-  def saveChar(char:dbCharacter, sender:ActorRef) { loader tell (SaveCharacter(char), sender) }
-
-  def register(client:ActorRef) {
-    loader tell (LoadCharacter(Useful.defaultCharacter), client)
-  }
 
   // Map Box functions
   def mapBox(x:Int, y:Int):ActorRef  = MapBoxes(mapBoxNumber(x, y))

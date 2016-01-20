@@ -1,9 +1,8 @@
 Roshan
 ======
 
-In development MMO server based on Akka & Scala.
+Demo MMO server based on Akka & Scala.
 
-|Build Status|
 
 
 Installation
